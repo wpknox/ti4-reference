@@ -1,6 +1,6 @@
 # Twilight Imperium 4th Edition Reference
 
-![Twilight Imperium Banner](/wwwwroot/images/ti4_banner.jpg)
+![Twilight Imperium Banner](/TwilightImperiumReference/wwwroot/images/ti4_banner.jpg)
 
 ## This project has no affiliation with Fantasy Flight Games
 
@@ -32,9 +32,3 @@ ___
 This project could eventually be expanded upon to provide users suggestions on how to play different races, generate random boards for a given number of players, and even more in-depth ideas such as suggestions on how to play *against* different races depending on a user's selected race. These are not the primary function of the project and would be looked into as an afterthought.
 
 I personally have not played enough TI to currently be able to provide these suggestions, but more experience and leveraging community ideas would be likely.
-
-___
-
-### File Information
-
-All information found on this project is readily available either on the TI4 wiki or in the books that come with the game itself. All data will be stored in JSON files in the `/json` directory.

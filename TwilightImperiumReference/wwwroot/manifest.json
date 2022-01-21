@@ -1,6 +1,6 @@
 {
-  "name": "TwilightImperiumReference",
-  "short_name": "TwilightImperiumReference",
+  "name": "TwilightImperium 4 Reference",
+  "short_name": "TI4Reference",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -8,14 +8,9 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "icon-512.png",
+      "src": "ti-logo.png",
       "type": "image/png",
-      "sizes": "512x512"
-    },
-    {
-      "src": "icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "256x256"
     }
   ]
 }

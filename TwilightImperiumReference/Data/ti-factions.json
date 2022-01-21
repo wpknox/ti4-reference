@@ -14,7 +14,7 @@
         ],
         "HomePlanets": ["Nestphar"],
         "Commodities": 3,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Mitosis",
                 "Ability": "Your space docks cannot produce infantry. At the start of the status phase, place 1 infantry from your reinforcements on any planet you control."
@@ -116,7 +116,7 @@
         ],
         "HomePlanets": ["Valk", "Avar", "Ylir"],
         "Commodities": 3,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Zeal",
                 "Ability": "You always vote first during the agenda phase. When you cast at least 1 vote, cast 1 additional vote for each player in the game including you."
@@ -217,7 +217,7 @@
         ],
         "HomePlanets": ["Arc Prime", "Wren Terra"],
         "Commodities": 2,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Munitions Reserves",
                 "Ability": "At the start of each round of space combat, you may spend 2 trade goods;  you may re-roll any number of your dice during that combat round."
@@ -302,7 +302,7 @@
         ],
         "HomePlanets": ["Lisis II", "Ragh"],
         "Commodities": 3,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Scavenge",
                 "Ability": "After you gain control of a planet, gain 1 trade good."
@@ -401,7 +401,7 @@
         ],
         "HomePlanets": ["Muaat"],
         "Commodities": 4,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Star Forge",
                 "Ability": "ACTION: Spend 1 token from your strategy pool to place either 2 fighters or 1 destroyer from your reinforcements in a system that contains 1 or more of your war suns."
@@ -508,7 +508,7 @@
         ],
         "HomePlanets": ["Arretza", "Hercant", "Kamdorn"],
         "Commodities": 6,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Masters of Trade",
                 "Ability": "You do not have to spend a command token to resolve the secondary ability of the \"Trade\" strategy card."
@@ -596,7 +596,7 @@
         ],
         "HomePlanets": ["The Dark"],
         "Commodities": 4,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Voidborn",
                 "Ability": "Nebulae do not affect your ships' movement."
@@ -628,8 +628,8 @@
         "FactionPromissoryNote": {
             "Name": "Dark Pact",
             "Description": "ACTION: Place this card face up in your play area. When you give a number of commodities to the Empyrean player equal to your maximum commodity value, you each gain 1 trade good. If you activate a system that contains 1 or more of the Empyrean player's units, return this card to the Empyrean player.",
-            "name2": "Blood Pact",
-            "description2": "ACTION: Place this card face up in your play area. When you and the Empyrean player cast votes for the same outcome, cast 4 additional votes for that outcome If you activate a system that contains 1 or more of the Empyrean player's units, return this card to the Empyrean player."
+            "SecondPNName": "Blood Pact",
+            "SecondPNDescription": "ACTION: Place this card face up in your play area. When you and the Empyrean player cast votes for the same outcome, cast 4 additional votes for that outcome If you activate a system that contains 1 or more of the Empyrean player's units, return this card to the Empyrean player."
         },
         "Flagship": {
             "Name": "Dynamo",
@@ -686,7 +686,7 @@
         ],
         "HomePlanets": ["Jord"],
         "Commodities": 4,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Orbital Drop",
                 "Ability": "ACTION: Spend 1 token from your strategy pool to place 2 infantry from your reinforcements on 1 planet you control."
@@ -796,7 +796,7 @@
         ],
         "HomePlanets": ["Creuss"],
         "Commodities": 4,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Quantum Entanglement",
                 "Ability": "You treat all systems that contain either an alpha or beta wormhole as adjacent to each other. Game effects cannot prevent you from using this ability."
@@ -885,7 +885,7 @@
         ],
         "HomePlanets": ["[0.0.0]"],
         "Commodities": 2,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Assimilate",
                 "Ability": "When you gain control of a planet, replace each PDS and space dock that is on that planet with a matching unit from your reinforcements."
@@ -987,7 +987,7 @@
         ],
         "HomePlanets": ["Ixth"],
         "Commodities": 3,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Edict",
                 "Ability": "When you win a combat, place 1 command token from your opponent's reinforcements in your fleet pool if it does not already contain 1 of that player's tokens; other player's tokens in your fleet pool increase your fleet limit but cannot be redistributed."
@@ -1093,7 +1093,7 @@
         ],
         "HomePlanets": ["Moll Primus"],
         "Commodities": 2,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Ambush",
                 "Ability": "At the start of a space combat, you may roll 1 die for each of up to 2 of your cruisers or destroyers in the system.  For each result equal to or greater than that ship's combat value, produce 1 hit; your opponent must assign it to 1 of their ships."
@@ -1179,7 +1179,7 @@
         ],
         "HomePlanets": ["Maaluuk", "Druua"],
         "Commodities": 3,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Telepathic",
                 "Ability": "At the end of the strategy phase, place the Naalu \"0\" token on your strategy card; you are first in initiative order."
@@ -1279,7 +1279,7 @@
         ],
         "HomePlanets": ["Naazir", "Rokha"],
         "Commodities": 3,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Distant Suns",
                 "Ability": "When you explore a planet that contains 1 of your mechs, you may draw 1 additional card; choose 1 to resolve and discard the rest."
@@ -1382,7 +1382,7 @@
         ],
         "HomePlanets": ["Mordai II"],
         "Commodities": 3,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Galactic Threat",
                 "Ability": "You cannot vote on agendas.  Once per agenda phase, after an agenda is revealed, you may predict aloud the outcome of that agenda.  If your prediction is correct, gain 1 technology that is owned by a player who voted how you predicted."
@@ -1471,7 +1471,7 @@
         ],
         "HomePlanets": ["Arcturus"],
         "Commodities": 4,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "The Company",
                 "Ability": "During setup, take the 2 additional Nomad faction agents and place them next to your faction sheet; you have 3 agents."
@@ -1577,7 +1577,7 @@
         ],
         "HomePlanets": ["Tren'lak", "Quinarra"],
         "Commodities": 3,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Unrelenting",
                 "Ability": "Apply +1 to the result of each of your unit's combat rolls."
@@ -1675,7 +1675,7 @@
         ],
         "HomePlanets": ["Elysium"],
         "Commodities": 2,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Terragenesis",
                 "Ability": "After you explore a planet that does not have a sleeper token, you may place or move 1 sleeper token onto that planet."
@@ -1806,7 +1806,7 @@
         ],
         "HomePlanets": ["Jol", "Nar"],
         "Commodities": 4,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Fragile",
                 "Ability": "Apply -1 to the result of each of your unit's combat rolls."
@@ -1895,7 +1895,7 @@
         ],
         "HomePlanets": ["Acheron"],
         "Commodities": 2,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Devour",
                 "Ability": "Capture your opponent's non-structure units that are destroyed during combat."
@@ -2008,7 +2008,7 @@
         ],
         "HomePlanets": ["Winnu"],
         "Commodities": 3,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Blood Ties",
                 "Ability": "You do not have to spend influence to remove the custodians token from Mecatol Rex."
@@ -2093,7 +2093,7 @@
         ],
         "HomePlanets": ["Archon Ren", "Archon Tau"],
         "Commodities": 4,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Peace Accords",
                 "Ability": "After you resolve the primary or secondary ability of the \"Diplomacy\" strategy card, you may gain control of 1 planet other than Mecatol Rex that does not contain any units and is in a system that is adjacent to a planet you control."
@@ -2178,7 +2178,7 @@
         ],
         "HomePlanets": ["Darien"],
         "Commodities": 2,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Indoctrination",
                 "Ability": "At the start of a ground combat, you may spend 2 influence to replace 1 of your opponent's participating infantry with 1 infantry from your reinforcements."
@@ -2263,7 +2263,7 @@
         ],
         "HomePlanets": ["Retillion", "Shalloq"],
         "Commodities": 3,
-        "Abilities": [
+        "FactionAbilities": [
             {
                 "Name": "Stall Tactics",
                 "Ability": "ACTION: Discard 1 action card from your hand."

@@ -1,0 +1,49 @@
+﻿@page "/factions"
+
+@inject HttpClient Http
+@using TwilightImperiumReference.Models
+
+<PageTitle>All Factions</PageTitle>
+
+<h1>All Factions</h1>
+
+@if (@AllFactions is null)
+{
+    <h3>Loading...</h3>
+}
+else
+{
+    @foreach (var faction in @AllFactions)
+    {
+        <MudNavLink Href="@($"/factions/{faction.Id}")">
+            <MudCard>
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h4">@faction.Name</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudItem lg="4" md="6" sm="12">
+                        <img src="@faction.Icon" alt="@faction.Id"/>
+                    </MudItem>
+                    
+                    <MudText Typo="Typo.h6"><strong>Flagship: </strong>@faction.Flagship.Name</MudText>
+                    <MudText><strong>Promissory Note: </strong>@faction.FactionPromissoryNote.Name</MudText>
+                    <MudText><strong>Commodities: </strong>@faction.Commodities</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudNavLink>
+
+    }
+}
+
+@code {
+    public List<Faction>? AllFactions { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        AllFactions = await Http.GetFromJsonAsync<List<Faction>>("data/ti-factions.json");
+        //Console.WriteLine(AllFactions[0].FactionPromissoryNote.Name);
+    }
+
+}

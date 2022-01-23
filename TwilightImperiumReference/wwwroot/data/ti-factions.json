@@ -2,7 +2,7 @@
     {
         "Id": "arborec",
         "Name": "The Arborec",
-        "Icon": "/wwwroot/images/factionLogos/Arborec.png",
+        "Icon": "images/factionLogos/Arborec.png",
         "StartingTechnology": ["Magen Defense Grid"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 1 },
@@ -99,7 +99,7 @@
     {
         "Id": "argent",
         "Name": "The Argent Flight",
-        "Icon": "/wwwroot/images/factionLogos/Argent.png",
+        "Icon": "/images/factionLogos/Argent.png",
         "StartingTechnology": [
             "Pick 2 of the 3:",
             "Neural Motivator",
@@ -205,7 +205,7 @@
     {
         "Id": "barony",
         "Name": "The Barony of Letnev",
-        "Icon": "/wwwroot/images/factionLogos/Barony.png",
+        "Icon": "/images/factionLogos/Barony.png",
         "StartingTechnology": ["Antimass Deflectors", "Plasma Scoring"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 1 },
@@ -291,7 +291,7 @@
     {
         "Id": "saar",
         "Name": "The Clan of Saar",
-        "Icon": "/wwwroot/images/factionLogos/Saar.png",
+        "Icon": "/images/factionLogos/Saar.png",
         "StartingTechnology": ["Antimass Deflectors"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 2 },
@@ -391,7 +391,7 @@
     {
         "Id": "muaat",
         "Name": "The Embers of Muaat",
-        "Icon": "/wwwroot/images/factionLogos/Muaat.png",
+        "Icon": "/images/factionLogos/Muaat.png",
         "StartingTechnology": ["Plasma Scoring"],
         "StartingUnits": [
             { "UnitType": "War Sun", "Amount": 1 },
@@ -497,7 +497,7 @@
     {
         "Id": "hacan",
         "Name": "The Emirates of Hacan",
-        "Icon": "/wwwroot/images/factionLogos/Hacan.png",
+        "Icon": "/images/factionLogos/Hacan.png",
         "StartingTechnology": ["Antimass Deflectors", "Sarween Tools"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 2 },
@@ -585,7 +585,7 @@
     {
         "Id": "empyrean",
         "Name": "The Empyrean",
-        "Icon": "/wwwroot/images/factionLogos/Empyrean.png",
+        "Icon": "/images/factionLogos/Empyrean.png",
         "StartingTechnology": ["Dark Energy Tap"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 2 },
@@ -625,12 +625,12 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "Dark Pact",
-            "Description": "ACTION: Place this card face up in your play area. When you give a number of commodities to the Empyrean player equal to your maximum commodity value, you each gain 1 trade good. If you activate a system that contains 1 or more of the Empyrean player's units, return this card to the Empyrean player.",
-            "SecondPNName": "Blood Pact",
-            "SecondPNDescription": "ACTION: Place this card face up in your play area. When you and the Empyrean player cast votes for the same outcome, cast 4 additional votes for that outcome If you activate a system that contains 1 or more of the Empyrean player's units, return this card to the Empyrean player."
-        },
+      "FactionPromissoryNote": {
+        "Name": "Dark Pact",
+        "Description": "ACTION: Place this card face up in your play area. When you give a number of commodities to the Empyrean player equal to your maximum commodity value, you each gain 1 trade good. If you activate a system that contains 1 or more of the Empyrean player's units, return this card to the Empyrean player.",
+        "SecondPNName": "Blood Pact",
+        "SecondPNDescription": "ACTION: Place this card face up in your play area. When you and the Empyrean player cast votes for the same outcome, cast 4 additional votes for that outcome If you activate a system that contains 1 or more of the Empyrean player's units, return this card to the Empyrean player."
+      },
         "Flagship": {
             "Name": "Dynamo",
             "Cost": 8,
@@ -675,7 +675,7 @@
     {
         "Id": "sol",
         "Name": "The Federation of Sol",
-        "Icon": "/wwwroot/images/factionLogos/Sol.png",
+        "Icon": "/images/factionLogos/Sol.png",
         "StartingTechnology": ["Neural Motivator", "Antimass Deflectors"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 2 },
@@ -785,7 +785,7 @@
     {
         "Id": "ghosts",
         "Name": "The Ghosts of Creuss",
-        "Icon": "/wwwroot/images/factionLogos/Ghosts.png",
+        "Icon": "/images/factionLogos/Ghosts.png",
         "StartingTechnology": ["Gravity Drive"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 1 },
@@ -873,7 +873,7 @@
     {
         "Id": "l1z1x",
         "Name": "The L1Z1X Mindnet",
-        "Icon": "/wwwroot/images/factionLogos/L1Z1X.png",
+        "Icon": "/images/factionLogos/L1Z1X.png",
         "StartingTechnology": ["Neural Motivator", "Plasma Scoring"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 1 },
@@ -975,7 +975,7 @@
     {
         "Id": "mahact",
         "Name": "The Mahact Gene Sorcerers",
-        "Icon": "/wwwroot/images/factionLogos/Mahact.png",
+        "Icon": "/images/factionLogos/Mahact.png",
         "StartingTechnology": ["Bio Stims", "Predictive Intelligence"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 1 },
@@ -1081,7 +1081,7 @@
     {
         "Id": "mentak",
         "Name": "The Mentak Coalition",
-        "Icon": "/wwwroot/images/factionLogos/Mentak.png",
+        "Icon": "/images/factionLogos/Mentak.png",
         "StartingTechnology": ["Sarween Tools", "Plasma Scoring"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 1 },
@@ -1166,7 +1166,7 @@
     {
         "Id": "naalu",
         "Name": "The Naalu Collective",
-        "Icon": "/wwwroot/images/factionLogos/Naalu.png",
+        "Icon": "/images/factionLogos/Naalu.png",
         "StartingTechnology": ["Neural Motivator", "Sarween Tools"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 1 },
@@ -1267,7 +1267,7 @@
     {
         "Id": "naaz-rokha",
         "Name": "The Naaz-Rokha Alliance",
-        "Icon": "/wwwroot/images/factionLogos/NaazRokha.png",
+        "Icon": "/images/factionLogos/NaazRokha.png",
         "StartingTechnology": ["Psychoarchaeology", "AI Development Algorithm"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 2 },
@@ -1366,7 +1366,7 @@
     {
         "Id": "nekro",
         "Name": "The Nekro Virus",
-        "Icon": "/wwwroot/images/factionLogos/Nekro.png",
+        "Icon": "/images/factionLogos/Nekro.png",
         "StartingTechnology": [
             "Dacxive Animators",
             "Valefar Assimilator X",
@@ -1459,7 +1459,7 @@
     {
         "Id": "nomad",
         "Name": "The Nomad",
-        "Icon": "/wwwroot/images/factionLogos/Nomad.png",
+        "Icon": "/images/factionLogos/Nomad.png",
         "StartingTechnology": ["Sling Relay"],
         "StartingUnits": [
             { "UnitType": "Flagship", "Amount": 1 },
@@ -1566,7 +1566,7 @@
     {
         "Id": "sardakk",
         "Name": "Sardakk N'orr",
-        "Icon": "/wwwroot/images/factionLogos/Sardakk.png",
+        "Icon": "/images/factionLogos/Sardakk.png",
         "StartingTechnology": null,
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 2 },
@@ -1664,7 +1664,7 @@
     {
         "Id": "titans",
         "Name": "The Titans of Ul",
-        "Icon": "/wwwroot/images/factionLogos/Ul.png",
+        "Icon": "/images/factionLogos/Ul.png",
         "StartingTechnology": ["Antimass Deflectors", "Scanlink Drone Network"],
         "StartingUnits": [
             { "UnitType": "Cruisers", "Amount": 2 },
@@ -1789,7 +1789,7 @@
     {
         "Id": "jol-nar",
         "Name": "The Universities of Jol-Nar",
-        "Icon": "/wwwroot/images/factionLogos/Jol-Nar.png",
+        "Icon": "/images/factionLogos/Jol-Nar.png",
         "StartingTechnology": [
             "Neural Motivator",
             "Antimass Deflectors",
@@ -1883,7 +1883,7 @@
     {
         "Id": "cabal",
         "Name": "The Vuil'Raith Cabal",
-        "Icon": "/wwwroot/images/factionLogos/Cabal.png",
+        "Icon": "/images/factionLogos/Cabal.png",
         "StartingTechnology": ["Self Assembly Routines"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 1 },
@@ -1996,7 +1996,7 @@
     {
         "Id": "winnu",
         "Name": "The Winnu",
-        "Icon": "/wwwroot/images/factionLogos/Winnu.png",
+        "Icon": "/images/factionLogos/Winnu.png",
         "StartingTechnology": ["ANY 1 WITHOUT PREREQUISITES"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 1 },
@@ -2081,7 +2081,7 @@
     {
         "Id": "xxcha",
         "Name": "The Xxcha Kingdom",
-        "Icon": "/wwwroot/images/factionLogos/Xxcha.png",
+        "Icon": "/images/factionLogos/Xxcha.png",
         "StartingTechnology": ["Graviton Laser System"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 1 },
@@ -2167,7 +2167,7 @@
     {
         "Id": "yin",
         "Name": "The Yin Brotherhood",
-        "Icon": "/wwwroot/images/factionLogos/Yin.png",
+        "Icon": "/images/factionLogos/Yin.png",
         "StartingTechnology": ["Sarween Tools"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 2 },
@@ -2251,7 +2251,7 @@
     {
         "Id": "yssaril",
         "Name": "The Yssaril Tribes",
-        "Icon": "/wwwroot/images/factionLogos/Yssaril.png",
+        "Icon": "/images/factionLogos/Yssaril.png",
         "StartingTechnology": ["Neural Motivator"],
         "StartingUnits": [
             { "UnitType": "Carrier", "Amount": 2 },

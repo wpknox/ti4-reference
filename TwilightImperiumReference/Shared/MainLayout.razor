@@ -5,10 +5,14 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" onclick="@(() => DrawerToggle())">
-        TI4 Reference
+    <MudAppBar Elevation="1" Color="Color.Info">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())"/>
+        <MudText Typo="@Typo.h4" Class="ml-3">TI4 Reference</MudText>
     </MudAppBar>
-    <MudDrawer @bind-Open="@_drawerOpen">
+    <MudDrawer @bind-Open="@_drawerOpen" ClipMode="DrawerClipMode.Docked" Elevation="2">
+        <MudDrawerHeader>
+            <MudText Typo="@Typo.h6">Pages</MudText>
+        </MudDrawerHeader>
         <NavMenu/>
     </MudDrawer>
     <MudMainContent>

@@ -51,10 +51,7 @@
                 "Prerequisites": ["green", "green"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Stymie",
-            "Description": "ACTION: Place this card face up in your play area. While this card is in your play area, the Arborec player cannot produce units in or adjacent to non-home systems that contain 1 or more of your units. If you activate a system that contains 1 or more of the Arborec player's units, return this card to the Arborec player."
-        },
+        "FactionPromissoryNotes": ["Stymie"],
         "Flagship": {
             "Name": "Duha Menaimon",
             "Cost": 8,
@@ -157,10 +154,7 @@
                 "Prerequisites": ["red", "red"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Strike Wing Ambuscade",
-            "Description": "When 1 or more of your units make a roll for a unit ability: Choose 1 of those units to roll 1 additional die. Then, return this card to the Argent player"
-        },
+        "FactionPromissoryNotes": ["Strike Wing Ambuscade"],
         "Flagship": {
             "Name": "Quetzecoatl",
             "Cost": 8,
@@ -242,10 +236,7 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "War Funding",
-            "Description": "At the start of a round of space combat: The Letnev player loses 2 trade goods. During this combat round, re-roll any number of your dice. Then, return this card to the Letnev player."
-        },
+        "FactionPromissoryNotes": ["War Funding"],
         "Flagship": {
             "Name": "Arc Secundus",
             "Cost": 8,
@@ -346,10 +337,7 @@
                 "Prerequisites": ["yellow", "yellow"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Ragh's Call",
-            "Description": "After you commit 1 or more units to land on a planet: Remove all of the Saar player's ground forces from that planet and place them on a planet controlled by the Saar player. Then return this card to the Saar player."
-        },
+        "FactionPromissoryNotes": ["Ragh's Call"],
         "Flagship": {
             "Name": "Son of Ragh",
             "Cost": 8,
@@ -449,10 +437,7 @@
                 "Prerequisites": ["red", "red", "red", "yellow"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Fires of the Gashlai",
-            "Description": "ACTION: Remove 1 token from the Muaat player's fleet pool and return it to their reinforcements. Then, gain your war sun unit upgrade technology card. Then, return this card to the Muaat player."
-        },
+        "FactionPromissoryNotes": ["Fires of the Gashlai"],
         "Flagship": {
             "Name": "The Inferno",
             "Cost": 8,
@@ -537,10 +522,7 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "Trade Convoys",
-            "Description": "ACTION: Place this card face-up in your play area. While this card is in your play area, you may negotiate transactions with players who are not your neighbor. If you activate a system that contains 1 or more of the Hacan player's units, return this card to the Hacan player."
-        },
+        "FactionPromissoryNotes": ["Trade Convoys"],
         "Flagship": {
             "Name": "Wrath of Kenara",
             "Cost": 8,
@@ -625,12 +607,7 @@
             }
         ],
         "FactionUnits": null,
-      "FactionPromissoryNote": {
-        "Name": "Dark Pact",
-        "Description": "ACTION: Place this card face up in your play area. When you give a number of commodities to the Empyrean player equal to your maximum commodity value, you each gain 1 trade good. If you activate a system that contains 1 or more of the Empyrean player's units, return this card to the Empyrean player.",
-        "SecondPNName": "Blood Pact",
-        "SecondPNDescription": "ACTION: Place this card face up in your play area. When you and the Empyrean player cast votes for the same outcome, cast 4 additional votes for that outcome If you activate a system that contains 1 or more of the Empyrean player's units, return this card to the Empyrean player."
-      },
+        "FactionPromissoryNotes": ["Dark Pact", "Blood Pact"],
         "Flagship": {
             "Name": "Dynamo",
             "Cost": 8,
@@ -737,10 +714,9 @@
                 "Prerequisites": ["blue", "blue"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Military Support",
-            "Description": "At the start of the Sol player's turn: Remove 1 token from the Sol player's strategy pool, if able, and return it to his reinforcements. Then, you may place 2 infantry from your reinforcements on any planet you control. Then return this card to the Sol player."
-        },
+        "FactionPromissoryNotes": [
+            "Military Support"
+        ],
         "Flagship": {
             "Name": "Genesis",
             "Cost": 8,
@@ -825,10 +801,9 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "Creuss Iff",
-            "Description": "At the start of your turn during the action phase: Place or move a Creuss wormhole token into either a system that contains a planet you control or a non-home system that does not contain another player's ships. Then, return this card to the Creuss player."
-        },
+        "FactionPromissoryNotes": [
+            "Creuss Iff"
+        ],
         "Flagship": {
             "Name": "Hil Colish",
             "Cost": 8,
@@ -927,10 +902,9 @@
                 "Prerequisites": ["blue", "blue", "yellow"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Cybernetic Enhancements",
-            "Description": "At the start of your turn: Remove 1 token from the L1Z1X player's strategy pool and return it to his reinforcements. Then, place 1 command token from your reinforcements in your strategy pool. Then, return this card to the L1Z1X player."
-        },
+        "FactionPromissoryNotes": [
+            "Cybernetic Enhancements"
+        ],
         "Flagship": {
             "Name": "[0.0.1]",
             "Cost": 8,
@@ -1033,10 +1007,9 @@
                 "Prerequisites": ["green", "green"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Scepter of Dominion",
-            "Description": "At the start of the strategy phase: Choose 1 non-home system that contains your units; each other player who has a token on the Mahact player's command sheet places a token from their reinforcements in that system. Then, return this card to the Mahact player."
-        },
+        "FactionPromissoryNotes": [
+            "Scepter of Dominion"
+        ],
         "Flagship": {
             "Name": "Arvicon Rex",
             "Cost": 8,
@@ -1118,10 +1091,9 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "Promise of Protection",
-            "Description": "ACTION: Place this card face-up in your play area. While this card is in your play area, the Mentak player cannot use their Pillage faction ability against you. If you activate a system that contains 1 or more of the Mentak player's units, return this card to the Mentak player."
-        },
+        "FactionPromissoryNotes": [
+            "Promise of Protection"
+        ],
         "Flagship": {
             "Name": "Fourth Moon",
             "Cost": 8,
@@ -1219,10 +1191,9 @@
                 "Prerequisites": ["green", "blue"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Gift of Prescience",
-            "Description": "At the end of the strategy phase: Place this card face-up in your play area and place the Naalu \"0\" token on your strategy card; you are first in the initiative order. The Naalu player cannot use their TELEPATHIC faction ability during this game round. Return this card to the Naalu player at the end of the status phase."
-        },
+        "FactionPromissoryNotes": [
+            "Gift of Prescience"
+        ],
         "Flagship": {
             "Name": "Matriarch",
             "Cost": 8,
@@ -1317,10 +1288,9 @@
                 "Prerequisites": null
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Black Market Forgery",
-            "Description": "ACTION: Purge 2 of your relic fragments of the same type to gain 1 relic. Then return this card to the Naaz-Rokha player."
-        },
+        "FactionPromissoryNotes": [
+            "Black Market Forgery"
+        ],
         "Flagship": {
             "Name": "Visz el Vir",
             "Cost": 8,
@@ -1411,10 +1381,9 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "Antivirus",
-            "Description": "At the start of a combat: Place this card face-up in your play area. While this card is in your play area, the Nekro player cannot use their TECHNOLOGICAL SINGULARITY faction ability against you. If you activate a system that contains 1 or more of the Nekro player's units, return this card to the Nekro player."
-        },
+        "FactionPromissoryNotes": [
+            "Antivirus"
+        ],
         "Flagship": {
             "Name": "The Alastor",
             "Cost": 8,
@@ -1505,10 +1474,9 @@
                 "Prerequisites": ["green", "blue", "yellow"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "The Cavalry",
-            "Description": "At the start of a space combat against a player other than the Nomad: During this combat, treat 1 of your non-fighter ships as if it has the SUSTAIN DAMAGE ability, combat value, and ANTI-FIGHTER BARRAGE value of the Nomad's flagship Return this card to the Nomad player at the end of this combat."
-        },
+        "FactionPromissoryNotes": [
+            "The Cavalry"
+        ],
         "Flagship": {
             "Name": "Memoria",
             "Cost": 8,
@@ -1616,10 +1584,9 @@
                 "Prerequisites": ["blue", "blue", "yellow"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Tekklar Legion",
-            "Description": "At the start of an invasion combat: Apply +1 to the result of each of your unit's combat rolls during this combat.  If your opponent is the N'orr player, apply -1 to the result of each of his unit's combat rolls during this combat. Then, return this card to the N'orr player."
-        },
+        "FactionPromissoryNotes": [
+            "Tekklar Legion"
+        ],
         "Flagship": {
             "Name": "C'Morran N'orr",
             "Cost": 8,
@@ -1741,10 +1708,9 @@
                 "Prerequisites": ["yellow", "red"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Terraform",
-            "Description": "ACTION: Attach this card to a non-home planet you control other than Mecatol Rex. Its resource and influence values are each increased by 1 and it is treated as having all 3 planet traits (Cultural, Hazardous, and Industrial)."
-        },
+        "FactionPromissoryNotes": [
+            "Terraform"
+        ],
         "Flagship": {
             "Name": "Ouranos",
             "Cost": 8,
@@ -1835,10 +1801,9 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "Research Agreement",
-            "Description": "After the Jol-Nar player researches a technology that is not a faction technology: Gain that technology. Then, return this card to the Jol-Nar player."
-        },
+        "FactionPromissoryNotes": [
+            "Research Agreement"
+        ],
         "Flagship": {
             "Name": "J.N.S Hylarim",
             "Cost": 8,
@@ -1947,10 +1912,9 @@
                 "Prerequisites": ["yellow", "yellow"]
             }
         ],
-        "FactionPromissoryNote": {
-            "Name": "Crucible",
-            "Description": "After you activate a system: Your ships do not roll for gravity rifts during this movement; apply an additional +1 to the move values of your ships that would move out of or through a gravity rift instead. Then, return this card to the Vuil'raith player."
-        },
+        "FactionPromissoryNotes": [
+            "Crucible"
+        ],
         "Flagship": {
             "Name": "The Terror Between",
             "Cost": 8,
@@ -2033,10 +1997,9 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "Acquiescence",
-            "Description": "At the end of the strategy phase: Exchange 1 of your strategy cards with a strategy card that was chosen by the Winnu player. Then, return this card to the Winnu player."
-        },
+        "FactionPromissoryNotes": [
+            "Acquiescence"
+        ],
         "Flagship": {
             "Name": "Salai Sai Corian",
             "Cost": 8,
@@ -2118,10 +2081,9 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "Political Favor",
-            "Description": "When an agenda is revealed: Remove 1 token from the Xxcha player's strategy pool and return it to their reinforcements.  Then, discard the revealed agenda and reveal 1 agenda from the top of the deck. Players vote on this agenda instead. Then, return this card to the Xxcha player."
-        },
+        "FactionPromissoryNotes": [
+            "Political Favor"
+        ],
         "Flagship": {
             "Name": "Loncarra Ssodu",
             "Cost": 8,
@@ -2203,10 +2165,9 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "Greyfire Mutagen",
-            "Description": "After a system is activated: The Yin player cannot use faction abilities or faction technology during this tactical action. Then, return this card to the Yin player."
-        },
+        "FactionPromissoryNotes": [
+            "Greyfire Mutagen"
+        ],
         "Flagship": {
             "Name": "Van Hauge",
             "Cost": 8,
@@ -2292,10 +2253,9 @@
             }
         ],
         "FactionUnits": null,
-        "FactionPromissoryNote": {
-            "Name": "Spy Net",
-            "Description": "At the start of your turn: Look at the Yssaril player's hand of action cards. Choose 1 of those cards and add it to your hand. Then, return this card to the Yssaril player."
-        },
+        "FactionPromissoryNotes": [
+            "Spy Net"
+        ],
         "Flagship": {
             "Name": "Y'sia Y'ssrila",
             "Cost": 8,

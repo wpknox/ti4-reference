@@ -1,0 +1,10 @@
+{
+    "Planets": [
+        {
+            "Name": "name",
+            "Resources": 0,
+            "Influcence": 0,
+            "Lore": "blah"
+        }
+    ]
+}

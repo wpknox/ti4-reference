@@ -5,7 +5,12 @@
 
 <PageTitle>All Factions</PageTitle>
 
-<h1>All Factions</h1>
+<MudContainer MaxWidth="MaxWidth.Medium">
+    <h1>TI4 Factions</h1>
+
+    <p>This page contains all of the playable factions in Twilight Imperium 4th Edition including the ones in the Prophecy of Kings Expansion.</p>
+    <p>Click on a faction to learn more about it.</p>
+</MudContainer>
 
 @if (@AllFactions is null)
 {
@@ -21,15 +26,32 @@ else
                     <CardHeaderContent>
                         <MudText Typo="Typo.h4">@faction.Name</MudText>
                     </CardHeaderContent>
+                    <CardHeaderActions>
+                        <MudItem lg="4" md="6" sm="12">
+                            <img src="@faction.Icon" alt="@faction.Id"/>
+                        </MudItem>
+                    </CardHeaderActions>
                 </MudCardHeader>
                 <MudCardContent>
-                    <MudItem lg="4" md="6" sm="12">
-                        <img src="@faction.Icon" alt="@faction.Id"/>
-                    </MudItem>
-                    
                     <MudText Typo="Typo.h6"><strong>Flagship: </strong>@faction.Flagship.Name</MudText>
-                    <MudText><strong>Promissory Note: </strong>@faction.FactionPromissoryNote.Name</MudText>
+                    <MudText><strong>Starting Tech: </strong>@ListToString(faction.StartingTechnology)</MudText>
+                    @if (faction.HomePlanets.Count > 1)
+                    {
+                        <MudText><strong>Home Planets : </strong>@ListToString(faction.HomePlanets)</MudText>
+                    }
+                    else
+                    {
+                        <MudText><strong>Home Planet : </strong>@faction.HomePlanets[0]</MudText>
+                    }
                     <MudText><strong>Commodities: </strong>@faction.Commodities</MudText>
+                    @if (faction.FactionPromissoryNotes.Count is 2)
+                    {
+                        <MudText><strong>Promissory Notes: </strong>@ListToString(faction.FactionPromissoryNotes)</MudText>
+                    }
+                    else
+                    {
+                        <MudText><strong>Promissory Note: </strong>@faction.FactionPromissoryNotes[0]</MudText>
+                    }
                 </MudCardContent>
             </MudCard>
         </MudNavLink>
@@ -38,12 +60,16 @@ else
 }
 
 @code {
-    public List<Faction>? AllFactions { get; set; }
+    public List<FactionDTO>? AllFactions { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        AllFactions = await Http.GetFromJsonAsync<List<Faction>>("data/ti-factions.json");
-        //Console.WriteLine(AllFactions[0].FactionPromissoryNote.Name);
+        AllFactions = await Http.GetFromJsonAsync<List<FactionDTO>>("data/factions.json");
+    }
+
+    private string ListToString(List<string>? list)
+    {
+        return string.Join(", ", list ?? new List<string>());
     }
 
 }

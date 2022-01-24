@@ -18,7 +18,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\data\ti-factions.json">
+    <Content Update="wwwroot\data\factions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\data\leaders.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\data\planets.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\data\pnotes.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\images\factionLogos\Arborec.png">
@@ -99,7 +108,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
+    <Folder Include="wwwroot\sample-data\" />
   </ItemGroup>
 
 </Project>

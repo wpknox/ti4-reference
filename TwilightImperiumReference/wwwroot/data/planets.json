@@ -1,10 +1,8 @@
-{
-    "Planets": [
-        {
-            "Name": "name",
-            "Resources": 0,
-            "Influcence": 0,
-            "Lore": "blah"
-        }
-    ]
-}
+[
+    {
+        "Name": "name",
+        "Resources": 0,
+        "Influcence": 0,
+        "Lore": "blah"
+    }
+]

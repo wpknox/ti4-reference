@@ -1,0 +1,520 @@
+[
+    {
+        "Faction": "arborec",
+        "Type": "Agent",
+        "Name": "Letani Ospha",
+        "Unlock": "At Game Start",
+        "Ability": "ACTION: Exhaust this card and choose a player's non-fighter ship; that player may replace that ship with one from their reinforcements that costs up to 2 more than the replaced ship."
+    },
+    {
+        "Faction": "arborec",
+        "Type": "Commander",
+        "Name": "Drzuga Rophal",
+        "Unlock": "Have 12 Ground Forces on Planets you control.",
+        "Ability": "After another player activates a system that contains 1 or more of your units that have PRODUCTION: You may produce 1 unit in that system."
+    },
+    {
+        "Faction": "arborec",
+        "Type": "Hero",
+        "Name": "Letani Miasmiala",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "ULTRASONIC EMITTER\nACTION: Produce any number of units in any number of systems that contain 1 or more of your ground forces. Then, purge this card."
+    },
+    {
+        "Faction": "argent",
+        "Type": "Agent",
+        "Name": "Trillossa Aun Mirik",
+        "Unlock": "At Game Start",
+        "Ability": "When a player produces ground forces in a system: You may exhaust this card; that player may place those units on any planets they control in that system and any adjacent systems."
+    },
+    {
+        "Faction": "argent",
+        "Type": "Commander",
+        "Name": "Trrakan Aun Zulok",
+        "Unlock": "Have 6 units that have ANTI-FIGHTER BARRAGE, SPACE CANNON or BOMBARDMENT on the game board",
+        "Ability": "When 1 or more of your units make a roll for a unit ability: You may choose 1 of those units to roll 1 additional die."
+    },
+    {
+        "Faction": "argent",
+        "Type": "Hero",
+        "Name": "Mirik Aun Sissiri",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "HELIX PROTOCOL\nACTION: Move any number of your ships from any systems to any number of other systems that contain 1 of your command tokens and no other players' ships. Then, purge this card."
+    },
+    {
+        "Faction": "barony",
+        "Type": "Agent",
+        "Name": "Viscount Unlenn",
+        "Unlock": "At Game Start",
+        "Ability": "At the start of a Space Combat round: You may exhaust this card to choose 1 ship in the active system. That ship rolls 1 additional die during this combat round."
+    },
+    {
+        "Faction": "barony",
+        "Type": "Commander",
+        "Name": "Rear Admiral Farran",
+        "Unlock": "Have 5 non-fighter ships in 1 system",
+        "Ability": "After 1 of your units uses SUSTAIN DAMAGE you may gain 1 Trade Good"
+    },
+    {
+        "Faction": "barony",
+        "Type": "Hero",
+        "Name": "Darktalon Treilla",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "DARK MATTER AFFINITY\nACTION: Place this card near the game board; the number of non-fighter ships you can have in systems is not limited by laws or by the number of command tokens in your fleet pool during this game round. At the end of that game round, purge this card."
+    },
+    {
+        "Faction": "saar",
+        "Type": "Agent",
+        "Name": "Captain Mendosa",
+        "Unlock": "At Game Start",
+        "Ability": "After a player activates a system: You may exhaust this card to increase the move value of 1 of that player's ships to match the move value of the ship on the game board that has the highest move value."
+    },
+    {
+        "Faction": "saar",
+        "Type": "Commander",
+        "Name": "Rowl Sarrig",
+        "Unlock": "Have 3 space docks on the game board",
+        "Ability": "When you produce fighters or infantry: You may place each of those units at any of your space docks that are not blockaded."
+    },
+    {
+        "Faction": "saar",
+        "Type": "Hero",
+        "Name": "Gurno Aggero",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "ARMAGEDDON RELAY\nACTION: Choose 1 system that is adjacent to 1 of your space docks. Destroy all other player's infantry and fighters in that system. Then, purge this card."
+    },
+    {
+        "Faction": "muaat",
+        "Type": "Agent",
+        "Name": "Umbat",
+        "Unlock": "At Game Start",
+        "Ability": "ACTION: Exhaust this card to choose a player; that player may produce up to 2 units that each have a cost of 4 or less in a system that contains one of their war suns or their flagship."
+    },
+    {
+        "Faction": "muaat",
+        "Type": "Commander",
+        "Name": "Magmus",
+        "Unlock": "Produce a War Sun",
+        "Ability": "After you spend a token from your strategy pool: You may gain 1 trade good."
+    },
+    {
+        "Faction": "muaat",
+        "Type": "Hero",
+        "Name": "Adjudicator Ba'al",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "NOVA SEED\nAfter you move a war sun into a non-home system other than Mecatol Rex: You may destroy all other players' units in that system and replace that system tile with the Muaat supernova tile. If you do, purge this card and each planet card that corresponds to the replaced system tile."
+    },
+    {
+        "Faction": "hacan",
+        "Type": "Agent",
+        "Name": "Carth of Golden Sands",
+        "Unlock": "At Game Start",
+        "Ability": "During the action phase: You may exhaust this card to gain 2 commodities or replenish another player's commodities."
+    },
+    {
+        "Faction": "hacan",
+        "Type": "Commander",
+        "Name": "Gila the Silvertongue",
+        "Unlock": "Have 10 Trade Goods",
+        "Ability": "When you cast votes: You may spend any number of trade goods; cast 2 additional votes for each trade good spent."
+    },
+    {
+        "Faction": "hacan",
+        "Type": "Hero",
+        "Name": "Harrugh Gefhara",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "GALACTIC SECURITIES NET\nWhen 1 or more of your units use PRODUCTION: You may reduce the cost of each of your units to 0 during this use of PRODUCTION. If you do, purge this card."
+    },
+    {
+        "Faction": "empyrean",
+        "Type": "Agent",
+        "Name": "Acamar",
+        "Unlock": "At Game Start",
+        "Ability": "After a player moves ships into a system that does not contain any planets: You may exhaust this card; that player gains 1 command token."
+    },
+    {
+        "Faction": "empyrean",
+        "Type": "Commander",
+        "Name": "Xuange",
+        "Unlock": "Be neighbors with all other players",
+        "Ability": "After another player moves ships into a system that contains 1 of your command tokens: You may return that token to your reinforcements."
+    },
+    {
+        "Faction": "empyrean",
+        "Type": "Hero",
+        "Name": "Conservator Procyon",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "MULTIVERSE SHIFT\nACTION: Place 1 frontier token in each system that does not contain any planets and does not already have a frontier token. Then, explore each frontier token that is in a system that contains 1 or more of your ships. Then, purge this card."
+    },
+    {
+        "Faction": "sol",
+        "Type": "Agent",
+        "Name": "Evelyn Delouis",
+        "Unlock": "At Game Start",
+        "Ability": "At the start of a ground combat round: You may exhaust this card to choose 1 ground force in the active system; that ground force rolls 1 additional die during that combat round."
+    },
+    {
+        "Faction": "sol",
+        "Type": "Commander",
+        "Name": "Claire Gibson",
+        "Unlock": "Control planets that have a combined total of at least 12 resources.",
+        "Ability": "At the start of a ground combat on a planet you control: You may place 1 infantry from your reinforcements on that planet."
+    },
+    {
+        "Faction": "sol",
+        "Type": "Hero",
+        "Name": "Jace X. 4th Air Legion",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "HELIO COMMAND ARRAY\nACTION: Remove each of your command tokens from the game board and return them to your reinforcements. Then, purge this card."
+    },
+    {
+        "Faction": "ghosts",
+        "Type": "Agent",
+        "Name": "Emissary Taivra",
+        "Unlock": "At Game Start",
+        "Ability": "After a player activates a system that contains a non-delta wormhole: You may exhaust this card; if you do, that system is adjacent to all other systems that contain a wormhole during this tactical action."
+    },
+    {
+        "Faction": "ghosts",
+        "Type": "Commander",
+        "Name": "Sai Seravus",
+        "Unlock": "Have units in 3 systems that contain alpha or beta wormholes.",
+        "Ability": "After your ships move: For each ship that has a capacity value and moved through 1 or more wormholes, you may place 1 fighter from your reinforcements with that ship if you have unused capacity in the active system."
+    },
+    {
+        "Faction": "ghosts",
+        "Type": "Hero",
+        "Name": "Riftwalker Meian",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "SINGULARITY REACTOR\nACTION: Swap the positions of any 2 systems that contain wormholes or your units, other than the Creuss system and the Wormhole Nexus. Then, purge this card."
+    },
+    {
+        "Faction": "l1z1x",
+        "Type": "Agent",
+        "Name": "I48S",
+        "Unlock": "At Game Start",
+        "Ability": "After a player activates a system: You may exhaust this card to allow that player to replace 1 of their infantry in the active system with 1 mech from their reinforcements."
+    },
+    {
+        "Faction": "l1z1x",
+        "Type": "Commander",
+        "Name": "2RAM",
+        "Unlock": "Have 4 dreadnoughts on the game board",
+        "Ability": "Units that have PLANETARY SHIELD do not prevent you from using Bombardment."
+    },
+    {
+        "Faction": "l1z1x",
+        "Type": "Hero",
+        "Name": "The Helmsman",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "DARK SPACE NAVIGATION\nACTION: Choose 1 system that does not contain other players' ships; you may move your flagship and any number of your dreadnoughts from other systems into the chosen system. Then, purge this card."
+    },
+    {
+        "Faction": "mahact",
+        "Type": "Agent",
+        "Name": "Jae Mir Kan",
+        "Unlock": "At Game Start",
+        "Ability": "When you would spend a command token during the secondary ability of a strategic action: You may exhaust this card to remove 1 of the active player's command tokens from the board and use it instead."
+    },
+    {
+        "Faction": "mahact",
+        "Type": "Commander",
+        "Name": "Il Na Viroset",
+        "Unlock": "Have 2 other factions' command tokens in your fleet pool.",
+        "Ability": "During your tactical actions, you can activate systems that contain your command tokens. If you do, return both command tokens to your reinforcements and end your turn."
+    },
+    {
+        "Faction": "mahact",
+        "Type": "Hero",
+        "Name": "Airo Shir Aur",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "BENEDICTION\nACTION: Move all units in the space area of any system to an adjacent system that contains a different player's ships. Space Combat is resolved in that system; neither player can retreat or resolve abilities that would move their ships. Then, purge this card."
+    },
+    {
+        "Faction": "mentak",
+        "Type": "Agent",
+        "Name": "Suffi An",
+        "Unlock": "At Game Start",
+        "Ability": "After the PILLAGE faction ability is used against another player: You may exhaust this card; if you do, you and that player each draw 1 action card."
+    },
+    {
+        "Faction": "mentak",
+        "Type": "Commander",
+        "Name": "S'Ula Mentarion",
+        "Unlock": "Have 4 cruisers on the game board",
+        "Ability": "After you win a space combat: You may force your opponent to give you 1 promissory note from their hand."
+    },
+    {
+        "Faction": "mentak",
+        "Type": "Hero",
+        "Name": "Ipswitch, Loose Cannon",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "SLEEPER CELL\nAt the start of space combat that you are participating in: You may purge this card; if you do, for each other player's ship that is destroyed during this combat, place 1 ship of that type from your reinforcements in the active system."
+    },
+    {
+        "Faction": "naalu",
+        "Type": "Agent",
+        "Name": "Z'eu",
+        "Unlock": "At Game Start",
+        "Ability": "After an agenda is revealed: You may exhaust this card to look at the top card of the agenda deck. Then, you may show that card to 1 other player."
+    },
+    {
+        "Faction": "naalu",
+        "Type": "Commander",
+        "Name": "M'aban",
+        "Unlock": "Have 12 fighters on the game board",
+        "Ability": "You may produce 1 additional fighter for their cost; these additional units do not count against your production limit."
+    },
+    {
+        "Faction": "naalu",
+        "Type": "Hero",
+        "Name": "The Oracle",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "C-RADIUM GEOMETRY\nAt the end of the status phase: You may force each other player to give you 1 promissory note from their hand. If you do, purge this card."
+    },
+    {
+        "Faction": "naaz-rokha",
+        "Type": "Agent",
+        "Name": "Garv and Gunn",
+        "Unlock": "At Game Start",
+        "Ability": "At the end of a player's turn: You may exhaust this card to allow that player to explore 1 of their planets."
+    },
+    {
+        "Faction": "naaz-rokha",
+        "Type": "Commander",
+        "Name": "Dart and Tai",
+        "Unlock": "Have 3 mechs in 3 systems",
+        "Ability": "After you gain control of a planet that was controlled by another player: You may explore that planet."
+    },
+    {
+        "Faction": "naaz-rokha",
+        "Type": "Hero",
+        "Name": "Hesh and Prit",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "PERFECT SYNTHESIS\nACTION: Gain 1 relic and perform the secondary ability of up to 2 readied or unchosen strategy cards; during this action, spend command tokens from your reinforcements instead of your strategy pool. Then, purge this card."
+    },
+    {
+        "Faction": "nekro",
+        "Type": "Agent",
+        "Name": "Nekro Malleon",
+        "Unlock": "At Game Start",
+        "Ability": "During the action phase: You may exhaust this card to choose a player; that player may discard 1 action card or spend 1 command token from their command sheet to gain 2 trade goods."
+    },
+    {
+        "Faction": "nekro",
+        "Type": "Commander",
+        "Name": "Nekro Acidos",
+        "Unlock": "Own 3 technologies. A \"Valefar Assimilator\" technology counts only if its X or Y token is on a technology",
+        "Ability": "After you gain a technology: You may draw 1 action card."
+    },
+    {
+        "Faction": "nekro",
+        "Type": "Hero",
+        "Name": "UNIT.DSGN.FLAYESH",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "POLYMORPHIC ALGORITHM\nACTION: Choose a planet that has a technology specialty in a system that contains your units. Destroy any other player's units on that planet. Gain trade goods equal to that planet's combined resource and influence values and gain 1 technology that matches the specialty of that planet. Then, purge this card."
+    },
+    {
+        "Faction": "nomad",
+        "Type": "Agent",
+        "Name": "Artuno the Betrayer",
+        "Unlock": "At Game Start",
+        "Ability": "When you gain trade goods from the supply: You may exhaust this card to place an equal number of trade goods on this card. When this card readies, gain the trade goods on this card."
+    },
+    {
+        "Faction": "nomad",
+        "Type": "Agent",
+        "Name": "Field Marshall Mercer",
+        "Unlock": "At Game Start",
+        "Ability": "At the end of a player's turn: You may exhaust this card to allow that player to remove up to 2 of their ground forces from the game board and place them on planets they control in the active system."
+    },
+    {
+        "Faction": "nomad",
+        "Type": "Agent",
+        "Name": "The Thundarian",
+        "Unlock": "At Game Start",
+        "Ability": "After the \"Roll Dice\" step of combat: You may exhaust this card. If you do, hits are not assigned to either players' units. Return to the start of this combat round's \"Roll Dice\" step."
+    },
+    {
+        "Faction": "nomad",
+        "Type": "Commander",
+        "Name": "Navarch Feng",
+        "Unlock": "Have 1 scored secret objective",
+        "Ability": "You can produce your flagship without spending resources."
+    },
+    {
+        "Faction": "nomad",
+        "Type": "Hero",
+        "Name": "Mirik Aun Sissiri",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "PROBABILITY MATRIX\nACTION: Place this card near the game board; your flagship and units it transports can move out of systems that contain your command tokens during this game round. At the end of that game round, purge this card."
+    },
+    {
+        "Faction": "sardakk",
+        "Type": "Agent",
+        "Name": "T'ro",
+        "Unlock": "At Game Start",
+        "Ability": "At the end of a player's tactical action: You may exhaust this card; if you do, that player may place 2 infantry from their reinforcements on a planet they control in the active system."
+    },
+    {
+        "Faction": "sardakk",
+        "Type": "Commander",
+        "Name": "G'hom Sek'kus",
+        "Unlock": "Control 5 planets in non-home systems",
+        "Ability": "During the \"Commit Ground Forces\" step: You can commit up to 1 ground force from each planet in the active system and each planet in adjacent systems that do not contain 1 of your command tokens."
+    },
+    {
+        "Faction": "sardakk",
+        "Type": "Hero",
+        "Name": "Sh'val Harbinger",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "TEKKLAR CONDITIONING\nAfter you move ships into the active system: You may skip directly to the \"Commit Ground Forces\" step. If you do, after you commit ground forces to land on planets, purge this card and return each of your ships in the active system to your reinforcements."
+    },
+    {
+        "Faction": "titans",
+        "Type": "Agent",
+        "Name": "Tellurian",
+        "Unlock": "At Game Start",
+        "Ability": "When a hit is produced against a unit: You may exhaust this card to cancel that hit."
+    },
+    {
+        "Faction": "titans",
+        "Type": "Commander",
+        "Name": "Tungstantus",
+        "Unlock": "Have 5 structures on the game board",
+        "Ability": "When 1 or more of your units use PRODUCTION: You may gain 1 trade good."
+    },
+    {
+        "Faction": "titans",
+        "Type": "Hero",
+        "Name": "Ul The Progenitor",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "GEOFORM\nACTION: Ready Elysium and attach this card to it. Its resource and influence values are each increased by 3, and it gains the SPACE CANNON 5 (x3) ability as if it were a unit."
+    },
+    {
+        "Faction": "jol-nar",
+        "Type": "Agent",
+        "Name": "Doctor Sucaban",
+        "Unlock": "At Game Start",
+        "Ability": "When a player spends resources to research: You may exhaust this card to allow that player to remove any number of their infantry from the game board. For each unit removed, reduce the resources spent by 1."
+    },
+    {
+        "Faction": "jol-nar",
+        "Type": "Commander",
+        "Name": "Ta Zern",
+        "Unlock": "Own 8 technologies",
+        "Ability": "After you roll dice for a unit ability: You may reroll any of those dice."
+    },
+    {
+        "Faction": "jol-nar",
+        "Type": "Hero",
+        "Name": "Rin, The Master's Legacy",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "GENETIC MEMORY\nACTION: For each non-unit upgrade technology you own, you may replace that technology with any technology of the same color from the deck. Then, purge this card."
+    },
+    {
+        "Faction": "cabal",
+        "Type": "Agent",
+        "Name": "The Stillness of Stars",
+        "Unlock": "At Game Start",
+        "Ability": "After another player replenishes commodities: You may exhaust this card to convert their commodities to trade goods and capture 1 unit from their reinforcements that has a cost equal to or lower than their commodity value."
+    },
+    {
+        "Faction": "cabal",
+        "Type": "Commander",
+        "Name": "That Which Molds Flesh",
+        "Unlock": "Have units in 3 Gravity Rifts",
+        "Ability": "When you produce fighter or infantry units: Up to 2 of those units do not count against your PRODUCTION limit."
+    },
+    {
+        "Faction": "cabal",
+        "Type": "Hero",
+        "Name": "It Feeds on Carrion",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "DIMENSIONAL ANCHOR\nACTION: Each other player rolls a die for each of their non-fighter ships that are in or adjacent to a system that contains a dimensional tear; on a 1-3, capture that unit. If this causes a player's ground forces or fighters to be removed, also capture those units. Then, purge this card."
+    },
+    {
+        "Faction": "winnu",
+        "Type": "Agent",
+        "Name": "Breekar Berekon",
+        "Unlock": "At Game Start",
+        "Ability": "When 1 or more of a player's units use PRODUCTION: You may exhaust this card to reduce the combined cost of the produced units by 2."
+    },
+    {
+        "Faction": "winnu",
+        "Type": "Commander",
+        "Name": "Rickar Rickani",
+        "Unlock": "Control Mecatol Rex or enter into a combat in the Mecatol Rex system.",
+        "Ability": "During combat: Apply +2 to the result of each of your unit's combat rolls in the Mecatol Rex system, your home system, and each system that contains a legendary planet"
+    },
+    {
+        "Faction": "winnu",
+        "Type": "Hero",
+        "Name": "Mathis Mathinus",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "IMPERIAL SEAL\nACTION: Perform the primary ability of any strategy card. Then, choose any number of other players. Those players may perform the secondary ability of that strategy card. Then, purge this card."
+    },
+    {
+        "Faction": "xxcha",
+        "Type": "Agent",
+        "Name": "Ggrocuto Rinn",
+        "Unlock": "At Game Start",
+        "Ability": "ACTION: Exhaust this card to ready any planet; if that planet is in a system that is adjacent to a planet you control, you may remove 1 infantry from that planet and return it to its reinforcements."
+    },
+    {
+        "Faction": "xxcha",
+        "Type": "Commander",
+        "Name": "Elder Qanoj",
+        "Unlock": "Control planets that have a combined value of at least 12 influence",
+        "Ability": "Each planet you exhaust to cast votes provides 1 additional vote. Game effects cannot prevent you from voting on an agenda."
+    },
+    {
+        "Faction": "xxcha",
+        "Type": "Hero",
+        "Name": "Xxekir Grom",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "POLITICAL DATA NEXUS\nACTION: You may discard 1 law from play. Look at the top 5 cards of the agenda deck. Choose 2 to reveal, and resolve each as if you had cast 1 vote for an outcome of your choice; discard the rest. Other players cannot resolve abilities during this action. Then, purge this card."
+    },
+    {
+        "Faction": "yin",
+        "Type": "Agent",
+        "Name": "Brother Milor",
+        "Unlock": "At Game Start",
+        "Ability": "After a player's destroyer or cruiser is destroyed: You may exhaust this card; if you do, that player may place up to 2 fighters from their reinforcements in that unit's system."
+    },
+    {
+        "Faction": "yin",
+        "Type": "Commander",
+        "Name": "Brother Omar",
+        "Unlock": "Use your INDOCTRINATION faction ability",
+        "Ability": "This card satisfies a green technology prerequisite. You may produce 1 additional infantry for their cost. These infantry do not count against your production limit."
+    },
+    {
+        "Faction": "yin",
+        "Type": "Hero",
+        "Name": "Dannel of the Tenth",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "SPINNER OVERDRIVE\nACTION: For each planet that contains any number of your infantry, either ready that planet or place an equal number of infantry from your reinforcements on that planet. Then, purge this card."
+    },
+    {
+        "Faction": "yssaril",
+        "Type": "Agent",
+        "Name": "Ssruu",
+        "Unlock": "At Game Start",
+        "Ability": "This card has the text ability of each other player's agent, even if that agent is exhausted."
+    },
+    {
+        "Faction": "yssaril",
+        "Type": "Commander",
+        "Name": "So Ata",
+        "Unlock": "Have 7 action cards",
+        "Ability": "After another player activates a system that contains your units: You may look at that player's action cards, promissory notes, or secret objectives."
+    },
+    {
+        "Faction": "yssaril",
+        "Type": "Hero",
+        "Name": "Kyver, Blade and Key",
+        "Unlock": "Have 3 Scored Objectives",
+        "Ability": "GUILD OF SPIES\nACTION: Each other player shows you 1 action card from their hand. For each player, you may either take that card or force that player to discard 3 random action cards from their hand. Then, purge this card."
+    }
+]

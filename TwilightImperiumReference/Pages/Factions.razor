@@ -1,6 +1,7 @@
 ﻿@page "/factions"
 
 @inject HttpClient Http
+@inject NavigationManager Naviagate
 @using TwilightImperiumReference.Models
 
 <PageTitle>All Factions</PageTitle>
@@ -20,42 +21,43 @@ else
 {
     @foreach (var faction in @AllFactions)
     {
-        <MudNavLink Href="@($"/factions/{faction.Id}")">
-            <MudCard>
-                <MudCardHeader>
-                    <CardHeaderContent>
-                        <MudText Typo="Typo.h4">@faction.Name</MudText>
-                    </CardHeaderContent>
-                    <CardHeaderActions>
-                        <MudItem lg="4" md="6" sm="12">
-                            <img src="@faction.Icon" alt="@faction.Id"/>
-                        </MudItem>
-                    </CardHeaderActions>
-                </MudCardHeader>
-                <MudCardContent>
-                    <MudText Typo="Typo.h6"><strong>Flagship: </strong>@faction.Flagship.Name</MudText>
-                    <MudText><strong>Starting Tech: </strong>@ListToString(faction.StartingTechnology)</MudText>
-                    @if (faction.HomePlanets.Count > 1)
-                    {
-                        <MudText><strong>Home Planets : </strong>@ListToString(faction.HomePlanets)</MudText>
-                    }
-                    else
-                    {
-                        <MudText><strong>Home Planet : </strong>@faction.HomePlanets[0]</MudText>
-                    }
-                    <MudText><strong>Commodities: </strong>@faction.Commodities</MudText>
-                    @if (faction.FactionPromissoryNotes.Count is 2)
-                    {
-                        <MudText><strong>Promissory Notes: </strong>@ListToString(faction.FactionPromissoryNotes)</MudText>
-                    }
-                    else
-                    {
-                        <MudText><strong>Promissory Note: </strong>@faction.FactionPromissoryNotes[0]</MudText>
-                    }
-                </MudCardContent>
-            </MudCard>
-        </MudNavLink>
-
+        <MudCard>
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h4">@faction.Name</MudText>
+                </CardHeaderContent>
+                <CardHeaderActions>
+                    <MudItem lg="3" md="6" sm="12">
+                        <img src="@faction.Icon" alt="@faction.Id" />
+                    </MudItem>
+                </CardHeaderActions>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudText Typo="Typo.h6"><strong>Flagship: </strong>@faction.Flagship.Name</MudText>
+                <MudText><strong>Starting Tech: </strong>@ListToString(faction.StartingTechnology)</MudText>
+                @if (faction.HomePlanets.Count > 1)
+                {
+                    <MudText><strong>Home Planets : </strong>@ListToString(faction.HomePlanets)</MudText>
+                }
+                else
+                {
+                    <MudText><strong>Home Planet : </strong>@faction.HomePlanets[0]</MudText>
+                }
+                <MudText><strong>Commodities: </strong>@faction.Commodities</MudText>
+                @if (faction.FactionPromissoryNotes.Count is 2)
+                {
+                    <MudText><strong>Promissory Notes: </strong>@ListToString(faction.FactionPromissoryNotes)</MudText>
+                }
+                else
+                {
+                    <MudText><strong>Promissory Note: </strong>@faction.FactionPromissoryNotes[0]</MudText>
+                }
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Text" Color="Color.Tertiary" @onclick="@(() => NaviagteToFactionPage(faction.Id))">Read More</MudButton>
+            </MudCardActions>
+        </MudCard>
+        <br/>
     }
 }
 
@@ -70,6 +72,11 @@ else
     private string ListToString(List<string>? list)
     {
         return string.Join(", ", list ?? new List<string>());
+    }
+
+    private void NaviagteToFactionPage(string factionId)
+    {
+        Naviagate.NavigateTo($"/factions/{factionId}");
     }
 
 }

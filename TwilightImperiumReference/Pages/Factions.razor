@@ -2,7 +2,6 @@
 
 @inject HttpClient Http
 @inject NavigationManager Naviagate
-@using TwilightImperiumReference.Models
 
 <PageTitle>All Factions</PageTitle>
 
@@ -13,7 +12,7 @@
     <p>Click on a faction to learn more about it.</p>
 </MudContainer>
 
-@if (@AllFactions is null)
+@if (@AllFactions is null || !@AllFactions.Any())
 {
     <h3>Loading...</h3>
 }
@@ -62,7 +61,7 @@ else
 }
 
 @code {
-    public List<FactionDTO>? AllFactions { get; set; }
+    protected List<FactionDTO>? AllFactions { get; set; }
 
     protected override async Task OnInitializedAsync()
     {

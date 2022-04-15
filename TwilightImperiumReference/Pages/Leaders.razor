@@ -1,0 +1,39 @@
+@page "/leaders"
+
+<PageTitle>Faction Leaders</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium">
+    <MudText Typo="Typo.h1">Faction Leaders</MudText>
+</MudContainer>
+
+@* search bar here and sort method selector *@
+
+@if (@AllLeaders is null || !@AllLeaders.Any())
+{
+    <MudContainer MaxWidth="MaxWidth.Medium">
+        <h1>Loading</h1>
+        <MudProgressCircular Color="Color.Primary" Size="Size.Large" Indeterminate="true"/>
+    </MudContainer>
+}
+else 
+{
+    @foreach (var leader in @AllLeaders)
+    {
+        <MudCard>
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h3">@leader.Name</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudText Typo="Typo.h6"><strong>Type: </strong>@leader.Type</MudText>
+                <MudText><strong>Unlock: </strong>@leader.Unlock</MudText>
+                <MudText><strong>Ability: </strong>@leader.Ability</MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Text" Color="Color.Tertiary" @onclick="@(() => NavigateToFactionPage(leader.Faction))">View Faction</MudButton>
+            </MudCardActions>
+        </MudCard>
+        <br/>
+    }
+}

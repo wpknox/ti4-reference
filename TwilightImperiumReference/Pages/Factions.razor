@@ -1,7 +1,7 @@
 ﻿@page "/factions"
 
 @inject HttpClient Http
-@inject NavigationManager Naviagate
+@inject NavigationManager Navigate
 
 <PageTitle>All Factions</PageTitle>
 
@@ -33,10 +33,10 @@ else
             </MudCardHeader>
             <MudCardContent>
                 <MudText Typo="Typo.h6"><strong>Flagship: </strong>@faction.Flagship.Name</MudText>
-                <MudText><strong>Starting Tech: </strong>@ListToString(faction.StartingTechnology)</MudText>
+                <MudText><strong>Starting Tech: </strong>@faction.StartingTechnology.Join()</MudText>
                 @if (faction.HomePlanets.Count > 1)
                 {
-                    <MudText><strong>Home Planets : </strong>@ListToString(faction.HomePlanets)</MudText>
+                    <MudText><strong>Home Planets : </strong>@faction.HomePlanets.Join()</MudText>
                 }
                 else
                 {
@@ -45,7 +45,7 @@ else
                 <MudText><strong>Commodities: </strong>@faction.Commodities</MudText>
                 @if (faction.FactionPromissoryNotes.Count is 2)
                 {
-                    <MudText><strong>Promissory Notes: </strong>@ListToString(faction.FactionPromissoryNotes)</MudText>
+                    <MudText><strong>Promissory Notes: </strong>@faction.FactionPromissoryNotes.Join()</MudText>
                 }
                 else
                 {
@@ -62,20 +62,12 @@ else
 
 @code {
     protected List<FactionDTO>? AllFactions { get; set; }
-
     protected override async Task OnInitializedAsync()
     {
         AllFactions = await Http.GetFromJsonAsync<List<FactionDTO>>("data/factions.json");
     }
-
-    private string ListToString(List<string>? list)
-    {
-        return string.Join(", ", list ?? new List<string>());
-    }
-
     private void NaviagteToFactionPage(string factionId)
     {
-        Naviagate.NavigateTo($"/factions/{factionId}");
+        Navigate.NavigateTo($"/factions/{factionId}");
     }
-
 }

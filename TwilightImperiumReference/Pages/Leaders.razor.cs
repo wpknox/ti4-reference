@@ -1,6 +1,7 @@
-using Microsoft.AspNetCore.Components;
-using TwilightImperiumReference.Models;
 using System.Net.Http.Json;
+using Microsoft.AspNetCore.Components;
+using TwilightImperiumReference;
+using TwilightImperiumReference.Models;
 
 namespace TwilightImperiumReference.Pages;
 public partial class Leaders
@@ -11,15 +12,14 @@ public partial class Leaders
     [Inject]
     protected NavigationManager? Navigate { get; set; }
 
-    public List<Leader>? AllLeaders { get; set; }
+    protected List<Leader>? AllLeaders { get; set; }
+
+    protected string? SearchString { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         AllLeaders = await Http.GetFromJsonAsync<List<Leader>>("data/leaders.json");
     }
 
-    protected void NavigateToFactionPage(string factionId)
-    {
-        Navigate!.NavigateTo($"/factions/{factionId}");
-    }
+    protected void NavigateToFactionPage(string factionId) => Navigate!.NavigateTo($"/factions/{factionId}");
 }

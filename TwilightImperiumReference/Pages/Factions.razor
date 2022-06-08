@@ -4,16 +4,14 @@
 
 <MudContainer MaxWidth="MaxWidth.Medium">
     <MudText Typo="Typo.h2" Class="mb-4">TI4 Factions</MudText>
-    <MudText Typo="Typo.subtitle1" Class="mb-4">This page contains all of the playable factions in Twilight Imperium 4th Edition including factions from the Prophecy of Kings Expansion.</MudText>
+    <MudText Typo="Typo.subtitle1" Class="mb-4">This page contains all of the playable factions in Twilight Imperium 4th
+        Edition including factions from the Prophecy of Kings Expansion.</MudText>
     <MudText Typo="Typo.body1" Class="mb-4">Click on a faction to learn more about it.</MudText>
 </MudContainer>
 
 @if (@AllFactions is null || !@AllFactions.Any())
 {
-    <MudContainer MaxWidth="MaxWidth.Medium">
-        <MudText Typo="Typo.h2">Loading</MudText>
-        <MudProgressCircular Color="Color.Primary" Size="Size.Large" Indeterminate="true"/>
-    </MudContainer>
+    <LoadingWheel />
 }
 else
 {
@@ -34,27 +32,28 @@ else
                 <MudText Typo="Typo.h6"><strong>Flagship: </strong>@faction.Flagship.Name</MudText>
                 <MudText><strong>Starting Tech: </strong>@faction.StartingTechnology.Join()</MudText>
                 @if (faction.HomePlanets.Count > 1)
-                {
-                    <MudText><strong>Home Planets : </strong>@faction.HomePlanets.Join()</MudText>
-                }
-                else
-                {
-                    <MudText><strong>Home Planet : </strong>@faction.HomePlanets[0]</MudText>
-                }
-                <MudText><strong>Commodities: </strong>@faction.Commodities</MudText>
-                @if (faction.FactionPromissoryNotes.Count is 2)
-                {
-                    <MudText><strong>Promissory Notes: </strong>@faction.FactionPromissoryNotes.Join()</MudText>
-                }
-                else
-                {
-                    <MudText><strong>Promissory Note: </strong>@faction.FactionPromissoryNotes[0]</MudText>
-                }
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Tertiary" @onclick="@(() => NavigateToFactionPage(faction.Id))">Read More</MudButton>
-            </MudCardActions>
+                        {
+                            <MudText><strong>Home Planets : </strong>@faction.HomePlanets.Join()</MudText>
+                        }
+                        else
+                        {
+                            <MudText><strong>Home Planet : </strong>@faction.HomePlanets[0]</MudText>
+                        }
+                        <MudText><strong>Commodities: </strong>@faction.Commodities</MudText>
+                        @if (faction.FactionPromissoryNotes.Count is 2)
+                        {
+                            <MudText><strong>Promissory Notes: </strong>@faction.FactionPromissoryNotes.Join()</MudText>
+                        }
+                        else
+                        {
+                            <MudText><strong>Promissory Note: </strong>@faction.FactionPromissoryNotes[0]</MudText>
+                        }
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Text" Color="Color.Tertiary" @onclick="@(() => NavigateToFactionPage(faction.Id))">
+                            Read More</MudButton>
+                    </MudCardActions>
         </MudCard>
-        <br/>
+        <br />
     }
 }

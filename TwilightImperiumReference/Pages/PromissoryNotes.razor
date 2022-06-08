@@ -1,14 +1,14 @@
 ﻿@page "/promissorynotes"
 
+<PageTitle>Promissory Notes</PageTitle>
+
 <MudContainer MaxWidth="MaxWidth.Medium">
     <MudText Typo="Typo.h2" Class="mb-4">Promissory Notes</MudText>
 </MudContainer>
-@if (AllNotes is null)
+
+@if (AllNotes is null || !AllNotes.Any())
 {
-    <MudContainer MaxWidth="MaxWidth.Medium">
-        <MudText Typo="Typo.h2">Loading</MudText>
-        <MudProgressCircular Color="Color.Primary" Size="Size.Large" Indeterminate="true"/>
-    </MudContainer>
+    <LoadingWheel />
 }
 else
 {

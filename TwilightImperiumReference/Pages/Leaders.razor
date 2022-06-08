@@ -6,9 +6,11 @@
     <MudText Typo="Typo.h2" Class="mb-4">Faction Leaders</MudText>
     <MudPaper Elevation="20">
         <MudToolBar Class="pa-4">
-            <MudTextField @bind-Value="@SearchString" Placeholder="Search For" Margin="Margin.Dense" Variant="Variant.Text"/>
+            <MudTextField @bind-Value="SearchString" Placeholder="Search For" Margin="Margin.Dense"
+                Variant="Variant.Text" />
             <MudSpacer />
-            <MudSelect T="string" Margin="Margin.Dense" Label="Order By" Placeholder="" Variant="Variant.Outlined" AnchorOrigin="Origin.BottomCenter">
+            <MudSelect T="string" Margin="Margin.Dense" Label="Order By" Placeholder="" Variant="Variant.Outlined"
+                AnchorOrigin="Origin.BottomCenter">
                 <MudSelectItem T="string" Value="@("Faction")" />
                 <MudSelectItem T="string" Value="@("A-Z")" />
                 <MudSelectItem T="string" Value="@("Z-A")" />
@@ -18,14 +20,11 @@
     </MudPaper>
 </MudContainer>
 
-@if (@AllLeaders is null || !@AllLeaders.Any())
+@if (AllLeaders is null || !AllLeaders.Any())
 {
-    <MudContainer MaxWidth="MaxWidth.Medium">
-        <MudText Typo="Typo.h2">Loading</MudText>
-        <MudProgressCircular Color="Color.Primary" Size="Size.Large" Indeterminate="true"/>
-    </MudContainer>
+    <LoadingWheel />
 }
-else 
+else
 {
     @foreach (var leader in @AllLeaders)
     {
@@ -41,9 +40,11 @@ else
                 <MudText><strong>Ability: </strong>@leader.Ability</MudText>
             </MudCardContent>
             <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Tertiary" @onclick="@(() => NavigateToFactionPage(leader.Faction))">View @FactionMap.Factions[leader.Faction]</MudButton>
+                <MudButton Variant="Variant.Text" Color="Color.Tertiary"
+                    @onclick="@(() => NavigateToFactionPage(leader.Faction))">View @FactionMap.Factions[leader.Faction]
+                </MudButton>
             </MudCardActions>
         </MudCard>
-        <br/>
+        <br />
     }
 }

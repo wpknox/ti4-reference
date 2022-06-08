@@ -1,5 +1,5 @@
-using System.Net.Http.Json;
 using Microsoft.AspNetCore.Components;
+using System.Net.Http.Json;
 using TwilightImperiumReference.Models;
 
 namespace TwilightImperiumReference.Pages;
@@ -17,5 +17,6 @@ public partial class Factions
     {
         AllFactions = await Http.GetFromJsonAsync<List<FactionDTO>>("data/factions.json");
     }
+
     protected void NavigateToFactionPage(string factionId) => Navigate!.NavigateTo($"/factions/{factionId}");
 }

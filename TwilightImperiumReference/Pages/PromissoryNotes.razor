@@ -1,14 +1,14 @@
 ﻿@page "/promissorynotes"
-@using TwilightImperiumReference.Models
-@using System.Text.Json;
-@inject HttpClient Http
 
 <MudContainer MaxWidth="MaxWidth.Medium">
-    <h1>Promissory Notes</h1>
+    <MudText Typo="Typo.h2" Class="mb-4">Promissory Notes</MudText>
 </MudContainer>
 @if (AllNotes is null)
 {
-    <h3>Loading...</h3>
+    <MudContainer MaxWidth="MaxWidth.Medium">
+        <MudText Typo="Typo.h2">Loading</MudText>
+        <MudProgressCircular Color="Color.Primary" Size="Size.Large" Indeterminate="true"/>
+    </MudContainer>
 }
 else
 {
@@ -25,15 +25,5 @@ else
             </MudCardContent>
         </MudCard>
         <br/>
-    }
-}
-
-@code {
-
-    public List<PromissoryNote>? AllNotes { get; set; }
-
-    protected override async Task OnInitializedAsync()
-    {
-        AllNotes = await Http.GetFromJsonAsync<List<PromissoryNote>>("data/pnotes.json") ?? new();
     }
 }

@@ -1,6 +1,4 @@
-using System;
-
-namespace TwilightImperiumReference;
+namespace TwilightImperiumReference.Shared;
 
 public static class FactionMap
 {

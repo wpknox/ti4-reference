@@ -1,20 +1,19 @@
 ﻿@page "/factions"
 
-@inject HttpClient Http
-@inject NavigationManager Navigate
-
 <PageTitle>All Factions</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.Medium">
-    <h1>TI4 Factions</h1>
-
-    <p>This page contains all of the playable factions in Twilight Imperium 4th Edition including the ones in the Prophecy of Kings Expansion.</p>
-    <p>Click on a faction to learn more about it.</p>
+    <MudText Typo="Typo.h2" Class="mb-4">TI4 Factions</MudText>
+    <MudText Typo="Typo.subtitle1" Class="mb-4">This page contains all of the playable factions in Twilight Imperium 4th Edition including factions from the Prophecy of Kings Expansion.</MudText>
+    <MudText Typo="Typo.body1" Class="mb-4">Click on a faction to learn more about it.</MudText>
 </MudContainer>
 
 @if (@AllFactions is null || !@AllFactions.Any())
 {
-    <h3>Loading...</h3>
+    <MudContainer MaxWidth="MaxWidth.Medium">
+        <MudText Typo="Typo.h2">Loading</MudText>
+        <MudProgressCircular Color="Color.Primary" Size="Size.Large" Indeterminate="true"/>
+    </MudContainer>
 }
 else
 {
@@ -53,21 +52,9 @@ else
                 }
             </MudCardContent>
             <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Tertiary" @onclick="@(() => NaviagteToFactionPage(faction.Id))">Read More</MudButton>
+                <MudButton Variant="Variant.Text" Color="Color.Tertiary" @onclick="@(() => NavigateToFactionPage(faction.Id))">Read More</MudButton>
             </MudCardActions>
         </MudCard>
         <br/>
-    }
-}
-
-@code {
-    protected List<FactionDTO>? AllFactions { get; set; }
-    protected override async Task OnInitializedAsync()
-    {
-        AllFactions = await Http.GetFromJsonAsync<List<FactionDTO>>("data/factions.json");
-    }
-    private void NaviagteToFactionPage(string factionId)
-    {
-        Navigate.NavigateTo($"/factions/{factionId}");
     }
 }

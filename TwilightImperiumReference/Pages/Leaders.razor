@@ -8,25 +8,25 @@
         <MudToolBar Class="pa-4">
             <MudTextField @bind-Value="SearchString" Placeholder="Search For" Margin="Margin.Dense"
                           Variant="Variant.Text" />
-            <MudSpacer />
-            <MudSelect T="string" Margin="Margin.Dense" Label="Order By" Placeholder="" Variant="Variant.Outlined"
+            <MudSelect Class="ml-8" T="string" Margin="Margin.Dense" Label="Order By" Placeholder="" Variant="Variant.Outlined"
                        AnchorOrigin="Origin.BottomCenter">
                 <MudSelectItem T="string" Value="@("Faction")" />
                 <MudSelectItem T="string" Value="@("A-Z")" />
                 <MudSelectItem T="string" Value="@("Z-A")" />
             </MudSelect>
-            <MudButton Class="mx-4" Variant="Variant.Filled" Color="Color.Primary">Reset</MudButton>
+            <MudButton Class="ml-4" Variant="Variant.Filled" Color="Color.Primary" OnClick="FilterLeaders">Search</MudButton>
+            <MudButton Class="ml-4" Variant="Variant.Outlined" Color="Color.Tertiary" OnClick="Reset">Reset</MudButton>
         </MudToolBar>
     </MudPaper>
 </MudContainer>
 
-@if (AllLeaders is null || !AllLeaders.Any())
+@if (DisplayedLeaders is null || !DisplayedLeaders.Any())
 {
     <LoadingWheel />
 }
 else
 {
-    @foreach (var leader in @AllLeaders)
+    @foreach (var leader in DisplayedLeaders)
     {
         <MudCard>
             <MudCardHeader>

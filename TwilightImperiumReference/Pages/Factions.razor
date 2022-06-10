@@ -11,13 +11,13 @@
     <MudText Typo="Typo.body1" Class="mb-4">Click on a faction to learn more about it.</MudText>
 </MudContainer>
 
-@if (@AllFactions is null || !@AllFactions.Any())
+@if (AllFactions is null || !AllFactions.Any())
 {
     <LoadingWheel />
 }
 else
 {
-    @foreach (var faction in @AllFactions)
+    @foreach (var faction in AllFactions)
     {
         <MudCard>
             <MudCardHeader>

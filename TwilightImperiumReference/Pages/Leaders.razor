@@ -20,7 +20,7 @@
     </MudPaper>
 </MudContainer>
 
-@if (DisplayedLeaders is null || !DisplayedLeaders.Any())
+@if (!DisplayedLeaders.Any())
 {
     <LoadingWheel />
 }

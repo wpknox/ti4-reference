@@ -14,7 +14,7 @@ public partial class Leaders
 
     private List<Leader> _allLeaders = new();
 
-    protected List<Leader>? DisplayedLeaders { get; set; }
+    protected List<Leader> DisplayedLeaders { get; set; } = new();
 
     protected string? SearchString { get; set; }
 

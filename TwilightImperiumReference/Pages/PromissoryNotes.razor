@@ -23,6 +23,15 @@ else
             <MudCardContent>
                 <MudText>@note.Description</MudText>
             </MudCardContent>
+            @if (note.Faction is not null)
+            {
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Tertiary"
+                   @onclick="@(() => NavigateToFactionPage(note.Faction!))">
+                        View @FactionMap.Factions[note.Faction!]
+                    </MudButton>
+                </MudCardActions>
+            }
         </MudCard>
         <br />
     }

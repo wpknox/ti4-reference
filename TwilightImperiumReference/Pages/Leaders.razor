@@ -6,19 +6,21 @@
     <MudText Typo="Typo.h2" Class="mb-4">Faction Leaders</MudText>
     <MudPaper Elevation="20">
         <MudToolBar Class="pa-4">
-            <MudTextField @bind-Value="SearchString" Placeholder="Search For" Margin="Margin.Dense"
+            <MudTextField @bind-Value="SearchString" OnKeyPress="SearchLeaders" Placeholder="Search For" Margin="Margin.Dense"
                           Variant="Variant.Text" />
             <MudSelect Class="ml-8" T="string" Margin="Margin.Dense" Label="Order By" Placeholder="" Variant="Variant.Outlined"
+                       SelectedValues="SortingOptions" SelectedValuesChanged="SortLeaders"
                        AnchorOrigin="Origin.BottomCenter">
-                <MudSelectItem T="string" Value="@("Faction")" />
                 <MudSelectItem T="string" Value="@("A-Z")" />
                 <MudSelectItem T="string" Value="@("Z-A")" />
+                <MudSelectItem T="string" Value="@("Faction")" />
             </MudSelect>
             <MudButton Class="ml-4" Variant="Variant.Filled" Color="Color.Primary" OnClick="FilterLeaders">Search</MudButton>
             <MudButton Class="ml-4" Variant="Variant.Outlined" Color="Color.Tertiary" OnClick="Reset">Reset</MudButton>
         </MudToolBar>
     </MudPaper>
 </MudContainer>
+
 
 @if (!DisplayedLeaders.Any())
 {
@@ -41,7 +43,7 @@ else
             </MudCardContent>
             <MudCardActions>
                 <MudButton Variant="Variant.Text" Color="Color.Tertiary"
-                           @onclick="@(() => NavigateToFactionPage(leader.Faction))">
+                   @onclick="@(() => NavigateToFactionPage(leader.Faction))">
                     View @FactionMap.Factions[leader.Faction]
                 </MudButton>
             </MudCardActions>

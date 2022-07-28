@@ -1,6 +1,7 @@
 using System.Net.Http.Json;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using TwilightImperiumReference.Models;
 
 namespace TwilightImperiumReference.Pages;
@@ -16,6 +17,8 @@ public partial class Leaders
 
     protected List<Leader> DisplayedLeaders { get; set; } = new();
 
+    protected List<string> SortingOptions { get; set; } = new();
+
     protected string? SearchString { get; set; }
 
     protected override async Task OnInitializedAsync()
@@ -25,6 +28,14 @@ public partial class Leaders
     }
 
     protected void NavigateToFactionPage(string factionId) => Navigate!.NavigateTo($"/factions/{factionId}");
+
+    protected async Task SearchLeaders(KeyboardEventArgs e)
+    {
+        if (e.Key is "Enter" or "NumpadEnter")
+        {
+            await Task.Run(FilterLeaders);
+        }
+    }
 
     protected void FilterLeaders()
     {
@@ -39,10 +50,23 @@ public partial class Leaders
                                                            .ToUpperInvariant()
                                                            .Contains(searchString)));
     }
+    protected void SortLeaders(IEnumerable<string> list)
+    {
+        SortingOptions = list.ToList();
+        DisplayedLeaders = SortingOptions.FirstOrDefault() switch
+        {
+            "Faction" => DisplayedLeaders.OrderBy(leader => leader.Faction).ToList(),
+            "A-Z" => DisplayedLeaders.OrderBy(leader => leader.Name).ToList(),
+            "Z-A" => DisplayedLeaders.OrderByDescending(leader => leader.Name).ToList(),
+            _ => DisplayedLeaders.OrderBy(leader => leader.Faction).ToList(),
+        };
+    }
 
     protected void Reset()
     {
         DisplayedLeaders = new(_allLeaders);
         SearchString = null;
+        SortingOptions.Clear();
     }
+
 }

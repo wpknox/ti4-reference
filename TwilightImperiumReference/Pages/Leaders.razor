@@ -1,0 +1,53 @@
+@page "/leaders"
+
+<PageTitle>Faction Leaders</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="pb-8">
+    <MudText Typo="Typo.h2" Class="mb-4">Faction Leaders</MudText>
+    <MudPaper Elevation="20">
+        <MudToolBar Class="pa-4">
+            <MudTextField @bind-Value="SearchString" OnKeyPress="SearchLeaders" Placeholder="Search For" Margin="Margin.Dense"
+                          Variant="Variant.Text" />
+            <MudSelect Class="ml-8" T="string" Margin="Margin.Dense" Label="Order By" Placeholder="" Variant="Variant.Outlined"
+                       SelectedValues="SortingOptions" SelectedValuesChanged="SortLeaders"
+                       AnchorOrigin="Origin.BottomCenter">
+                <MudSelectItem T="string" Value="@("A-Z")" />
+                <MudSelectItem T="string" Value="@("Z-A")" />
+                <MudSelectItem T="string" Value="@("Faction")" />
+            </MudSelect>
+            <MudButton Class="ml-4" Variant="Variant.Filled" Color="Color.Primary" OnClick="FilterLeaders">Search</MudButton>
+            <MudButton Class="ml-4" Variant="Variant.Outlined" Color="Color.Tertiary" OnClick="Reset">Reset</MudButton>
+        </MudToolBar>
+    </MudPaper>
+</MudContainer>
+
+
+@if (!DisplayedLeaders.Any())
+{
+    <LoadingWheel />
+}
+else
+{
+    @foreach (var leader in DisplayedLeaders)
+    {
+        <MudCard>
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h3">@leader.Name</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudText Typo="Typo.h6"><strong>Type: </strong>@leader.Type</MudText>
+                <MudText><strong>Unlock: </strong>@leader.Unlock</MudText>
+                <MudText><strong>Ability: </strong>@leader.Ability</MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Text" Color="Color.Tertiary"
+                   @onclick="@(() => NavigateToFactionPage(leader.Faction))">
+                    View @FactionMap.Factions[leader.Faction]
+                </MudButton>
+            </MudCardActions>
+        </MudCard>
+        <br />
+    }
+}

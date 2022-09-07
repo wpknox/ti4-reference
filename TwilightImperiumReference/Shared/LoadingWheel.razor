@@ -1,0 +1,16 @@
+<MudContainer MaxWidth="MaxWidth.Medium">
+        <MudText Typo="@FontSize">Loading</MudText>
+        <MudProgressCircular Color="@WheelColor" Size="@Size" Indeterminate="true"/>
+</MudContainer>
+
+@code
+{
+        [Parameter]
+        public Typo FontSize { get; set; } = Typo.h2;
+        
+        [Parameter]
+        public Size Size { get; set; } = Size.Large;
+        
+        [Parameter]
+        public Color WheelColor { get; set; } = Color.Primary;
+}

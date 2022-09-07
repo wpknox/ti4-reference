@@ -1,14 +1,14 @@
 ﻿@page "/promissorynotes"
-@using TwilightImperiumReference.Models
-@using System.Text.Json;
-@inject HttpClient Http
+
+<PageTitle>Promissory Notes</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.Medium">
-    <h1>Promissory Notes</h1>
+    <MudText Typo="Typo.h2" Class="mb-4">Promissory Notes</MudText>
 </MudContainer>
-@if (AllNotes is null)
+
+@if (AllNotes is null || !AllNotes.Any())
 {
-    <h3>Loading...</h3>
+    <LoadingWheel />
 }
 else
 {
@@ -23,17 +23,16 @@ else
             <MudCardContent>
                 <MudText>@note.Description</MudText>
             </MudCardContent>
+            @if (note.Faction is not null)
+            {
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Tertiary"
+                   @onclick="@(() => NavigateToFactionPage(note.Faction!))">
+                        View @FactionMap.Factions[note.Faction!]
+                    </MudButton>
+                </MudCardActions>
+            }
         </MudCard>
-        <br/>
-    }
-}
-
-@code {
-
-    public List<PromissoryNote>? AllNotes { get; set; }
-
-    protected override async Task OnInitializedAsync()
-    {
-        AllNotes = await Http.GetFromJsonAsync<List<PromissoryNote>>("data/pnotes.json") ?? new();
+        <br />
     }
 }

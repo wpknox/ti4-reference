@@ -1,16 +1,20 @@
 @page "/factions/{FactionId}"
 
-<PageTitle>@FactionId</PageTitle>
 
-<MudContainer MaxWidth="MaxWidth.Medium">
-    
-    @if (FactionId is not null && FactionMap.Factions.ContainsKey(FactionId))
-    {
-        <MudText Typo="Typo.h2" Class="mb-4">@FactionMap.Factions[FactionId]</MudText>
-    }
-    else
-    {
+@if (FactionId is null || !FactionMap.Factions.ContainsKey(FactionId))
+{
+    // invalid faction
+    <PageTitle>Invalid Faction</PageTitle>
+    <MudContainer MaxWidth="MaxWidth.Medium">
         <MudText Typo="Typo.h2" Class="mb-4">Invalid Faction Name</MudText>
         <MudText Typo="Typo.body1" Class="mb-4">'@FactionId' is not a faction in Twilight Imperium IV</MudText>
-    }
+    </MudContainer>
+    return;
+}
+
+<PageTitle>@FactionId</PageTitle>
+    
+<MudContainer MaxWidth="MaxWidth.Medium">
+    <MudText Typo="Typo.h2" Class="mb-4">@FactionMap.Factions[FactionId]</MudText>
+    @* Need internet to determine what MudContainer type to put the Faction information in *@
 </MudContainer>

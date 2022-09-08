@@ -2,4 +2,15 @@
 
 <PageTitle>@FactionId</PageTitle>
 
-<h1>Welcome to @FactionMap.Factions[FactionId!]'s  Page</h1>
+<MudContainer MaxWidth="MaxWidth.Medium">
+    
+    @if (FactionId is not null && FactionMap.Factions.ContainsKey(FactionId))
+    {
+        <MudText Typo="Typo.h2" Class="mb-4">@FactionMap.Factions[FactionId]</MudText>
+    }
+    else
+    {
+        <MudText Typo="Typo.h2" Class="mb-4">Invalid Faction Name</MudText>
+        <MudText Typo="Typo.body1" Class="mb-4">'@FactionId' is not a faction in Twilight Imperium IV</MudText>
+    }
+</MudContainer>

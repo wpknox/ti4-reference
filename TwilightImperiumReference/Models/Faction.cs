@@ -23,6 +23,22 @@ public class Faction
     {
 
     }
+
+    public Faction(FactionDTO dto)
+    {
+        Id = dto.Id;
+        Name = dto.Name;
+        Icon = dto.Icon;
+        StartingUnits = dto.StartingUnits;
+        Commodities = dto.Commodities;
+        FactionAbilities = dto.FactionAbilities;
+        FactionTechnology = dto.FactionTechnology;
+        FactionUnits = dto.FactionUnits;
+        FactionPromissoryNotes = dto.FactionPromissoryNotes
+                                    .Select(fpn => new PromissoryNote(fpn, Id))
+                                    .ToList();
+
+    }
 }
 
 public class FactionDTO

@@ -23,27 +23,7 @@ public class Faction
     {
 
     }
-
-    public Faction(FactionDTO dto)
-    {
-        Id = dto.Id;
-        Name = dto.Name;
-        Icon = dto.Icon;
-        //StartingTechnology = dto.StartingTechnology?.Select(st => new Technology(st))
-        //                                            .ToList() ?? new();
-        StartingUnits = dto.StartingUnits;
-        Commodities = dto.Commodities;
-        FactionAbilities = dto.FactionAbilities;
-        FactionTechnology = dto.FactionTechnology;
-        FactionUnits = dto.FactionUnits;
-        FactionPromissoryNotes = dto.FactionPromissoryNotes
-                                    .Select(fpn => new PromissoryNote(fpn, Id))
-                                    .ToList();
-        Flagship = dto.Flagship;
-        Mech = dto.Mech;
-        Leaders = dto.Leaders;
-        Lore = dto.Lore;
-    }
+    
 }
 
 public class FactionDTO

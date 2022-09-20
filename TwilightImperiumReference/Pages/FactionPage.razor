@@ -13,8 +13,48 @@
 }
 
 <PageTitle>@FactionId</PageTitle>
-    
-<MudContainer MaxWidth="MaxWidth.Medium">
-    <MudText Typo="Typo.h2" Class="mb-4">@FactionMap.Factions[FactionId]</MudText>
-    @* Need internet to determine what MudContainer type to put the Faction information in *@
-</MudContainer>
+
+@if (Faction is null)
+{
+    <LoadingWheel />
+}
+else
+{
+    <MudContainer Fixed="true">
+        <MudPaper Elevation="2" Class="pa-8 ma-4" Width="100%">
+            <MudText Typo="Typo.h2" Class="mb-4">@Faction.Name</MudText>
+            <MudText Typo="Typo.h6"><strong>Flagship: </strong>@Faction.Flagship.Name</MudText>
+            <MudText Typo="Typo.h6"><strong>Commodities: </strong>@Faction.Commodities</MudText>
+            
+            <MudText Typo="Typo.h2">Starting Technology</MudText>
+            @if (Faction.StartingTechnology is not null && Faction.StartingTechnology.Any())
+            {
+                <MudGrid Justify="Justify.FlexStart" Spacing="2">
+                    @foreach (var startingTech in Faction.StartingTechnology ?? new())
+                    {
+                        <MudItem xs="6" Style="display:flex;">
+                            <MudCard Elevation="4">
+                                <MudCardHeader>
+                                    <CardHeaderContent>
+                                        <MudText Typo="Typo.h6">@startingTech.Name</MudText>
+                                    </CardHeaderContent>
+                                </MudCardHeader>
+                                <MudCardContent>
+                                    <MudText Typo="Typo.body1"><strong>Color: </strong>
+                                        <MudText Inline="true" Style="@GetColorString(startingTech.Color)">@startingTech.Color</MudText>
+                                    </MudText>
+                                    @if (startingTech.Prerequisities is not null && startingTech.Prerequisities.Any())
+                                    {
+                                        <MudText Typo="Typo.body1"><strong>Prereqs: </strong>@startingTech.Prerequisities.Join()</MudText>
+                                    }
+                                    <MudDivider />
+                                    <MudText Typo="Typo.body1">@startingTech.Description</MudText>
+                                </MudCardContent>
+                            </MudCard>
+                        </MudItem>
+                    }
+                </MudGrid>
+            }
+        </MudPaper>
+    </MudContainer>
+}

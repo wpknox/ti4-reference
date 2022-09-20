@@ -9,7 +9,7 @@
     },
     {
         "Name": "Antimass Deflectors",
-        "Description": "Your ships can move into and through asteroid fields\nWhen other players’ units use SPACE CANNON against your units, apply -1 to the result of each die roll",
+        "Description": "Your ships can move into and through asteroid fields\nWhen other players' units use SPACE CANNON against your units, apply -1 to the result of each die roll",
         "Color": "blue",
         "Prerequisities": []
     },

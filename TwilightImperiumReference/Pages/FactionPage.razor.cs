@@ -23,4 +23,9 @@ public partial class FactionPage
         if (factionDto is not null)
             Faction = await Repository!.GetFactionByDTO(factionDto);
     }
+
+    protected string GetColorString(string color)
+    {
+        return $"color:{color}";
+    }
 }

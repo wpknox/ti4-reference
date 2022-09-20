@@ -2,7 +2,6 @@
 
 public class Faction
 {
-    // use this on the detailed page.. use DTO on list page...
     public string Id { get; set; } = "";
     public string Name { get; set; } = "";
     public string Icon { get; set; } = "";

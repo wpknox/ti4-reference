@@ -1,29 +1,22 @@
 [
     {
-        "Name": "XYZ",
-        "Description": "XYZ",
-        "Color": "green",
+        "Name": "Magen Defense Grid",
+        "Description": "You may exhaust this card at the start of a round of ground combat on a planet that contains 1 or more of your units that have Planetary Shield; your opponent cannot make combat rolls this combat round",
+        "Color": "red",
         "Prerequisities": [
-            "",
-            ""
+            "red"
         ]
     },
     {
-        "Name": "XYZ",
-        "Description": "XYZ",
-        "Color": "green",
-        "Prerequisities": [
-            "",
-            ""
-        ]
+        "Name": "Antimass Deflectors",
+        "Description": "Your ships can move into and through asteroid fields\nWhen other players’ units use SPACE CANNON against your units, apply -1 to the result of each die roll",
+        "Color": "blue",
+        "Prerequisities": []
     },
     {
-        "Name": "XYZ",
-        "Description": "XYZ",
-        "Color": "green",
-        "Prerequisities": [
-            "",
-            ""
-        ]
+        "Name": "Plasma Scoring",
+        "Description": "When 1 or more of your units use Bombardment or Space Cannon, 1 of those units may roll 1 additional die",
+        "Color": "red",
+        "Prerequisities": []
     }
 ]

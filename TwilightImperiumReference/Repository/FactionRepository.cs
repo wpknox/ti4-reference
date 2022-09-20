@@ -6,22 +6,28 @@ public class FactionRepository : IFactionRepository
 {
     private readonly HttpClient _client;
     private readonly IPromissoryNoteRepository _pNoteRepo;
+    private readonly ITechnologyRepository _techRepo;
 
-    public FactionRepository(HttpClient client, IPromissoryNoteRepository pNoteRepo)
+    public FactionRepository(HttpClient client, IPromissoryNoteRepository pNoteRepo, ITechnologyRepository techRepo)
     {
         _client = client;
         _pNoteRepo = pNoteRepo;
+        _techRepo = techRepo;
     }
 
     public async Task<Faction> GetFactionByDTO(FactionDTO dto)
     {
-        //StartingTechnology = dto.StartingTechnology?.Select(st => new Technology(st))
-        //                                            .ToList() ?? new();
-        List<PromissoryNote> pNotes = new();
+        var startingTech = new List<Technology>();
+        foreach (string name in dto.StartingTechnology ?? new())
+        {
+            var tech = await _techRepo.GetTechnology(name);
+            startingTech.Add(tech);
+        }
+        var pNotes = new List<PromissoryNote>();
         foreach (string fpn in dto.FactionPromissoryNotes)
         {
-            var x = await _pNoteRepo.GetPromissoryNote(fpn, dto.Id);
-            pNotes.Add(x);
+            var pNote = await _pNoteRepo.GetPromissoryNote(fpn, dto.Id);
+            pNotes.Add(pNote);
         }
         var faction = new Faction
         {
@@ -38,7 +44,7 @@ public class FactionRepository : IFactionRepository
             Leaders = dto.Leaders,
             Lore = dto.Lore,
             FactionPromissoryNotes = pNotes,
-
+            StartingTechnology = startingTech,
         };
         return faction;
     }

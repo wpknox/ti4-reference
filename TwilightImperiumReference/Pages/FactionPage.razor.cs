@@ -13,7 +13,6 @@ public partial class FactionPage
     protected HttpClient Http { get; set; } = new();
     [Inject]
     protected IFactionRepository? Repository { get; set; }
-
     protected Faction? Faction { get; set; }
     
     protected override async Task OnInitializedAsync()

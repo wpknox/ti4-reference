@@ -11,6 +11,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddMudServices();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddScoped<IPromissoryNoteRepository, PromissoryNoteRepository>();
+builder.Services.AddScoped<ITechnologyRepository, TechnologyRepository>();
 builder.Services.AddScoped<IFactionRepository, FactionRepository>();
 
 await builder.Build().RunAsync();

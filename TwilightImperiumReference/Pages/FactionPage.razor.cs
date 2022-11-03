@@ -28,4 +28,11 @@ public partial class FactionPage
     {
         return $"color:{color}";
     }
+
+    protected string StartingUnitString(StartingUnit su)
+    {
+        if (su.Amount is 1)
+            return $"{su.Amount} {su.UnitType}";
+        return $"{su.Amount} {su.UnitType}s";
+    }
 }

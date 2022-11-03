@@ -50,6 +50,17 @@ else
                                     <MudDivider />
                                     <MudText Typo="Typo.body1">@startingTech.Description</MudText>
                                 </MudCardContent>
+                                <MudList Clickable="true" Color="Color.Warning" Dense="true">
+                                    <MudListSubheader>
+                                        Starting Units
+                                    </MudListSubheader>
+                                    @foreach (var startingUnit in Faction.StartingUnits)
+                                    {
+                                        <MudListItem>
+                                            @StartingUnitString(startingUnit)
+                                        </MudListItem>
+                                    }
+                                </MudList>
                             </MudCard>
                         </MudItem>
                     }

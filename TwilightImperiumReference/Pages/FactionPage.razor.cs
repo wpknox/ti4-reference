@@ -18,6 +18,7 @@ public partial class FactionPage
     protected MudListItem? SelectedUnitListItem { get; set; }
     protected Unit? SelectedUnit { get; set; }
     protected bool IsUnitDisplayed { get; set; } = false;
+    private DialogOptions DialogOptions = new() { FullWidth = true, MaxWidth = MaxWidth.ExtraSmall };
     protected override async Task OnInitializedAsync()
     {
         FactionId = FactionId ?? "na";
@@ -39,11 +40,15 @@ public partial class FactionPage
         return $"{su.Amount} {su.UnitType}s";
     }
 
-    protected void GetUnitAndOpen(string unitType)
+    protected async Task GetUnitAndOpen(string unitType)
     {
-        if (IsUnitDisplayed)
-            return;
-        // needs units.json
+        // needs units.json filled out
+        SelectedUnit = (await Http.GetFromJsonAsync<List<Unit>>("data/units.json"))?
+                       .FirstOrDefault(u => u.UnitType == unitType);
         IsUnitDisplayed = true;
+    }
+    private void UnitClose()
+    {
+        IsUnitDisplayed = false;
     }
 }

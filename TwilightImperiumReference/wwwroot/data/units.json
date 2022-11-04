@@ -1,0 +1,8 @@
+[{
+    "UnitType": "Carrier",
+    "Cost": 2,
+    "CombatNumber": 9,
+    "Capacity": 4,
+    "Hits": 1,
+    "Movement": 1
+}]

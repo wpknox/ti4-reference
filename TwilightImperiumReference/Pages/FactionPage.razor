@@ -26,8 +26,8 @@ else
             <MudText Typo="Typo.h2" Class="mb-4">@Faction.Name</MudText>
             <MudText Typo="Typo.h6"><strong>Flagship: </strong>@Faction.Flagship.Name</MudText>
             <MudText Typo="Typo.h6"><strong>Commodities: </strong>@Faction.Commodities</MudText>
-            
-            <MudText Typo="Typo.h2">Starting Technology</MudText>
+            <MudDivider Class="ma-4" />
+            <MudText Typo="Typo.h2" Class="mb-2">Starting Technology</MudText>
             @if (Faction.StartingTechnology is not null && Faction.StartingTechnology.Any())
             {
                 <MudGrid Justify="Justify.FlexStart" Spacing="2">
@@ -37,18 +37,20 @@ else
                             <MudCard Elevation="4">
                                 <MudCardHeader>
                                     <CardHeaderContent>
-                                        <MudText Typo="Typo.h6">@startingTech.Name</MudText>
+                                        <MudText Style="text-decoration: underline;" Typo="Typo.h6">@startingTech.Name</MudText>
                                     </CardHeaderContent>
                                 </MudCardHeader>
-                                <MudCardContent>
+                                <MudCardContent Class="mt-n4">
                                     <MudText Typo="Typo.body1"><strong>Color: </strong>
                                         <MudText Inline="true" Style="@GetColorString(startingTech.Color)">@startingTech.Color</MudText>
                                     </MudText>
                                     @if (startingTech.Prerequisities is not null && startingTech.Prerequisities.Any())
                                     {
-                                        <MudText Typo="Typo.body1"><strong>Prereqs: </strong>@startingTech.Prerequisities.Join()</MudText>
+                                        <MudText Class="my-2" Typo="Typo.body1">
+                                            <strong>Prereqs: </strong>@startingTech.Prerequisities.Join()
+                                        </MudText>
                                     }
-                                    <MudDivider />
+                                    <MudDivider Class="my-2" />
                                     <MudText Typo="Typo.body1">@startingTech.Description</MudText>
                                 </MudCardContent>
                             </MudCard>
@@ -56,21 +58,20 @@ else
                     }
                 </MudGrid>
             }
-            <MudPaper Elevation="4">
+            <MudPaper Elevation="4" Class="my-4">
                 <MudList Clickable="true" Color="Color.Warning" Dense="true" @bind-SelectedItem="SelectedUnitListItem">
-                    <MudListSubheader> 
-                        <MudText Typo="Typo.h6">
+                    <MudListSubheader Class="mb-n3"> 
+                        <MudText Typo="Typo.h6" Style="text-decoration: underline;">
                             Starting Units
                         </MudText>
                     </MudListSubheader>
                     @foreach (var startingUnit in Faction.StartingUnits)
                     {
-                        // need to make a component that renders all of a normal units info
-                        // when MLI is clicked, open component with SelectedUnit as parameter
-                        // LOOK AT MudDialog!!!
                         var unitType = startingUnit.UnitType;
-                        <MudListItem Value="unitType">
-                            @StartingUnitString(startingUnit)
+                        <MudListItem Value="unitType" OnClick="@(() => GetUnitAndOpen(unitType))">
+                            <MudText Typo="Typo.body2">
+                                @startingUnit.UnitType - @startingUnit.Amount
+                            </MudText>
                         </MudListItem>
                     }
                 </MudList>
@@ -78,3 +79,70 @@ else
         </MudPaper>
     </MudContainer>
 }
+
+@* Dialog for Unit *@
+<MudDialog @bind-IsVisible="@IsUnitDisplayed" Options="@DialogOptions">
+    <TitleContent>
+        @if (SelectedUnit is null)
+        {
+            <MudText Typo="Typo.h6">Invalid Unit Selected</MudText>
+        }
+        else if(SelectedUnit! is FactionUnit factionUnit)
+        {
+            <MudText Typo="Typo.h6">The @(factionUnit.Faction)'s @factionUnit.Name</MudText>
+        }
+        else
+        {
+            <MudText Typo="Typo.h6">@SelectedUnit.UnitType</MudText>
+        }
+    </TitleContent>
+    <DialogContent>
+        <MudPaper Class="pa-4 mt-n4">
+            @if (SelectedUnit is null)
+            {
+                <MudText>Unit selected is not in units.json yet</MudText>
+            }
+            else
+            {
+                <MudStack Spacing="2">
+                    <MudText>Cost: @SelectedUnit.Cost</MudText>
+                    <MudText>Combat Number: @SelectedUnit.CombatNumber</MudText>
+                    <MudText>Hits: @SelectedUnit.Hits</MudText>
+                    <MudText>Movement: @SelectedUnit.Movement</MudText>
+                    <MudText>Capacity: @(SelectedUnit.Capacity is null ? "N/A" : SelectedUnit.Capacity)</MudText>
+                    @if (SelectedUnit.Abilities is not null)
+                    {
+                        <MudList Dense="true">
+                            <MudListSubheader>
+                                Abilities
+                            </MudListSubheader>
+                            @foreach (var ability in SelectedUnit.Abilities)
+                            {
+                                <MudListItem>
+                                    @ability
+                                </MudListItem>
+                            }
+                        </MudList>
+                    }
+                    @if (SelectedUnit.Prerequisites is not null)
+                    {
+                        <MudList Dense="true">
+                            <MudListSubheader>
+                                Abilities
+                            </MudListSubheader>
+                            @foreach (var prereq in SelectedUnit.Prerequisites)
+                            {
+                                <MudListItem>
+                                    @prereq
+                                </MudListItem>
+                            }
+                        </MudList>
+                    }
+                </MudStack>
+            }
+        </MudPaper>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="UnitClose" Color="Color.Primary" Variant="Variant.Filled">Close</MudButton>
+    </DialogActions>
+</MudDialog>

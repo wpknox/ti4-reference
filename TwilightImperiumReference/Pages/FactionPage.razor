@@ -7,19 +7,20 @@
     <PageTitle>Invalid Faction</PageTitle>
     <MudContainer MaxWidth="MaxWidth.Medium">
         <MudText Typo="Typo.h2" Class="mb-4">Invalid Faction Name</MudText>
-        <MudText Typo="Typo.body1" Class="mb-4">'@FactionId' is not a faction in Twilight Imperium IV</MudText>
+        <MudText Typo="Typo.body1" Class="mb-4">'@FactionId is not a faction in Twilight Imperium IV</MudText>
     </MudContainer>
     return;
 }
 
-<PageTitle>@FactionId</PageTitle>
 
 @if (Faction is null)
 {
+    <PageTitle>@FactionId</PageTitle>
     <LoadingWheel />
 }
 else
 {
+    <PageTitle>@Faction.Name</PageTitle>
     <MudContainer Fixed="true">
         <MudPaper Elevation="2" Class="pa-8 ma-4" Width="100%">
             <MudText Typo="Typo.h2" Class="mb-4">@Faction.Name</MudText>
@@ -50,22 +51,25 @@ else
                                     <MudDivider />
                                     <MudText Typo="Typo.body1">@startingTech.Description</MudText>
                                 </MudCardContent>
-                                <MudList Clickable="true" Color="Color.Warning" Dense="true">
-                                    <MudListSubheader>
-                                        Starting Units
-                                    </MudListSubheader>
-                                    @foreach (var startingUnit in Faction.StartingUnits)
-                                    {
-                                        <MudListItem>
-                                            @StartingUnitString(startingUnit)
-                                        </MudListItem>
-                                    }
-                                </MudList>
                             </MudCard>
                         </MudItem>
                     }
                 </MudGrid>
             }
+            <MudPaper Elevation="4">
+                <MudList Clickable="true" Color="Color.Warning" Dense="true">
+                    <MudListSubheader> 
+                        @* increase font size if possible *@
+                        Starting Units
+                    </MudListSubheader>
+                    @foreach (var startingUnit in Faction.StartingUnits)
+                    {
+                        <MudListItem>
+                            @StartingUnitString(startingUnit)
+                        </MudListItem>
+                    }
+                </MudList>
+            </MudPaper>
         </MudPaper>
     </MudContainer>
 }

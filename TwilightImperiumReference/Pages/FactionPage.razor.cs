@@ -1,5 +1,6 @@
 using System.Net.Http.Json;
 using Microsoft.AspNetCore.Components;
+using MudBlazor;
 using TwilightImperiumReference.Models;
 using TwilightImperiumReference.Repository;
 
@@ -14,7 +15,9 @@ public partial class FactionPage
     [Inject]
     protected IFactionRepository? Repository { get; set; }
     protected Faction? Faction { get; set; }
-    
+    protected MudListItem? SelectedUnitListItem { get; set; }
+    protected Unit? SelectedUnit { get; set; }
+    protected bool IsUnitDisplayed { get; set; } = false;
     protected override async Task OnInitializedAsync()
     {
         FactionId = FactionId ?? "na";
@@ -34,5 +37,13 @@ public partial class FactionPage
         if (su.Amount is 1)
             return $"{su.Amount} {su.UnitType}";
         return $"{su.Amount} {su.UnitType}s";
+    }
+
+    protected void GetUnitAndOpen(string unitType)
+    {
+        if (IsUnitDisplayed)
+            return;
+        // needs units.json
+        IsUnitDisplayed = true;
     }
 }

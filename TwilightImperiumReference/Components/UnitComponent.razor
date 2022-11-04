@@ -1,0 +1,9 @@
+<MudContainer MaxWidth="MaxWidth.Medium">
+        <MudText Typo="Typo.h5">@Unit.UnitType</MudText>
+</MudContainer>
+
+@code
+{
+    [Parameter]
+    public Unit Unit { get; set; } = new();
+}

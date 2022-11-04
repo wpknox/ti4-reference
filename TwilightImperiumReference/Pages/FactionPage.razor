@@ -57,14 +57,19 @@ else
                 </MudGrid>
             }
             <MudPaper Elevation="4">
-                <MudList Clickable="true" Color="Color.Warning" Dense="true">
+                <MudList Clickable="true" Color="Color.Warning" Dense="true" @bind-SelectedItem="SelectedUnitListItem">
                     <MudListSubheader> 
-                        @* increase font size if possible *@
-                        Starting Units
+                        <MudText Typo="Typo.h6">
+                            Starting Units
+                        </MudText>
                     </MudListSubheader>
                     @foreach (var startingUnit in Faction.StartingUnits)
                     {
-                        <MudListItem>
+                        // need to make a component that renders all of a normal units info
+                        // when MLI is clicked, open component with SelectedUnit as parameter
+                        // LOOK AT MudDialog!!!
+                        var unitType = startingUnit.UnitType;
+                        <MudListItem Value="unitType">
                             @StartingUnitString(startingUnit)
                         </MudListItem>
                     }

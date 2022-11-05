@@ -112,30 +112,27 @@ else
                     <MudText>Capacity: @(SelectedUnit.Capacity is null ? "N/A" : SelectedUnit.Capacity)</MudText>
                     @if (SelectedUnit.Abilities is not null)
                     {
-                        <MudList Dense="true">
-                            <MudListSubheader>
-                                Abilities
-                            </MudListSubheader>
+                        <MudText>Abilities:</MudText>
+                        <MudList Class="mt-n3" DisableGutters="false" Dense="true">
                             @foreach (var ability in SelectedUnit.Abilities)
                             {
-                                <MudListItem>
-                                    @ability
+                                <MudListItem Class="my-n3">
+                                    <MudText Typo="Typo.body2">
+                                        @ability
+                                    </MudText>
                                 </MudListItem>
                             }
                         </MudList>
                     }
                     @if (SelectedUnit.Prerequisites is not null)
                     {
-                        <MudList Dense="true">
-                            <MudListSubheader>
-                                Abilities
-                            </MudListSubheader>
-                            @foreach (var prereq in SelectedUnit.Prerequisites)
-                            {
-                                <MudListItem>
-                                    @prereq
-                                </MudListItem>
-                            }
+                        <MudText>Prerequisites:</MudText>
+                        <MudList Class="mt-n3" Dense="true">
+                            <MudListItem Class="my-n3">
+                                <MudText Typo="Typo.body2">
+                                    @SelectedUnit.Prerequisites.Join()
+                                </MudText>
+                            </MudListItem>
                         </MudList>
                     }
                 </MudStack>

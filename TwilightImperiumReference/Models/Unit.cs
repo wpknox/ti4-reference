@@ -10,6 +10,7 @@ public class Unit
     public int Movement { get; set; } = 0;
     public List<string>? Abilities { get; set; }
     public List<string>? Prerequisites { get; set; }
+    public Unit? Upgrade { get; set; }
 }
 
 public class FactionUnit : Unit

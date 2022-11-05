@@ -1,8 +1,51 @@
-[{
+[
+  {
     "UnitType": "Carrier",
-    "Cost": 2,
+    "Cost": 3,
     "CombatNumber": 9,
     "Capacity": 4,
     "Hits": 1,
     "Movement": 1
-}]
+  },
+  {
+    "UnitType": "Cruiser",
+    "Cost": 2,
+    "CombatNumber": 7,
+    "Hits": 1,
+    "Movement": 2
+  },
+  {
+    "UnitType": "Destroyer",
+    "Cost": 1,
+    "CombatNumber": 9,
+    "Hits": 1,
+    "Movement": 2,
+    "Abilities": ["Anti-Fighter Barrage 9 (x2)"]
+  },
+  {
+    "UnitType": "Dreadnought",
+    "Cost": 4,
+    "CombatNumber": 5,
+    "Capacity": 1,
+    "Hits": 2,
+    "Movement": 1,
+    "Abilities": ["Sustain Damage", "Bombardment 5"]
+  },
+  {
+    "UnitType": "Fighter",
+    "Cost": 0.5,
+    "CombatNumber": 9,
+    "Hits": 1,
+    "Movement": 0
+  },
+  {
+    "UnitType": "War Sun",
+    "Cost": 12,
+    "CombatNumber": 3,
+    "Capacity": 6,
+    "Hits": 3,
+    "Movement": 2,
+    "Abilities": ["Sustain Damage", "Bombardment 3(x3)"],
+    "Prerequisites": ["yellow", "red", "red", "red"]
+  }
+]

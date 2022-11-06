@@ -1,0 +1,31 @@
+<MudCard Elevation="4">
+    @if (Leader is null)
+    {
+        <MudCardHeader>
+            <CardHeaderContent>
+                <MudText Style="text-decoration: underline;" Typo="Typo.h6">Unable to Load Leader</MudText>
+            </CardHeaderContent>
+        </MudCardHeader>
+    }
+    else
+    {
+        <MudCardHeader>
+            <CardHeaderContent>
+                <MudText Style="text-decoration: underline;" Typo="Typo.h6">@Leader.Name</MudText>
+            </CardHeaderContent>
+        </MudCardHeader>
+        <MudCardContent Class="mt-n4">
+            <MudText Typo="Typo.body1"><strong>Type: </strong> @Leader.Type</MudText>
+            <MudText Typo="Typo.body1">Unlocks when: @Leader.Unlock</MudText>
+            <MudText Typo="Typo.body1">Ability:
+                <MudText Inline="true" Typo="Typo.body2">@Leader.Ability</MudText>
+            </MudText>
+        </MudCardContent>
+    }
+</MudCard>
+
+@code
+{
+    [Parameter]
+    protected Leader? Leader { get; set; }
+}

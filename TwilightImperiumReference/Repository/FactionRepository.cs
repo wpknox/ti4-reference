@@ -7,12 +7,14 @@ public class FactionRepository : IFactionRepository
     private readonly HttpClient _client;
     private readonly IPromissoryNoteRepository _pNoteRepo;
     private readonly ITechnologyRepository _techRepo;
+    private readonly IPlanetRepository _planetRepo;
 
-    public FactionRepository(HttpClient client, IPromissoryNoteRepository pNoteRepo, ITechnologyRepository techRepo)
+    public FactionRepository(HttpClient client, IPromissoryNoteRepository pNoteRepo, ITechnologyRepository techRepo, IPlanetRepository planetRepo)
     {
         _client = client;
         _pNoteRepo = pNoteRepo;
         _techRepo = techRepo;
+        _planetRepo = planetRepo;
     }
 
     public async Task<Faction> GetFactionByDTO(FactionDTO dto)
@@ -29,6 +31,7 @@ public class FactionRepository : IFactionRepository
             var pNote = await _pNoteRepo.GetPromissoryNote(fpn, dto.Id);
             pNotes.Add(pNote);
         }
+        var planets = await _planetRepo.GetFactionHomePlanets(dto.Id);
         var faction = new Faction
         {
             Id = dto.Id,
@@ -45,6 +48,7 @@ public class FactionRepository : IFactionRepository
             Lore = dto.Lore,
             FactionPromissoryNotes = pNotes,
             StartingTechnology = startingTech,
+            HomePlanets = planets,
         };
         return faction;
     }

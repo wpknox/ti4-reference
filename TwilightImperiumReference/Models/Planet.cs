@@ -6,4 +6,5 @@ public class Planet
     public int Resources { get; set; }
     public int Influence { get; set; }
     public string Lore { get; set; } = "";
+    public string? FactionId { get; set; }
 }

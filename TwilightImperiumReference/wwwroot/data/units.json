@@ -5,7 +5,15 @@
     "CombatNumber": 9,
     "Capacity": 4,
     "Hits": 1,
-    "Movement": 1
+    "Movement": 1,
+    "Upgrade": {
+      "UnitType": "Carrier II",
+      "Cost": 3,
+      "CombatNumber": 7,
+      "Capacity": 5,
+      "Hits": 1,
+      "Movement": 2
+    }
   },
   {
     "UnitType": "Cruiser",

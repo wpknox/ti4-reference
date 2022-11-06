@@ -76,11 +76,14 @@ else
                     }
                 </MudList>
             </MudPaper>
+            <MudPaper Elevation="4">
+                @* planets... *@
+            </MudPaper>
         </MudPaper>
     </MudContainer>
 }
 
-@* Dialog for Unit *@
+@* Dialog for Starting Unit *@
 <MudDialog @bind-IsVisible="@IsUnitDisplayed" Options="@DialogOptions">
     <TitleContent>
         @if (SelectedUnit is null)

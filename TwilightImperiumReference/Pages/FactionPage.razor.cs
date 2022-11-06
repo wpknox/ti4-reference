@@ -21,34 +21,23 @@ public partial class FactionPage
     private DialogOptions DialogOptions = new() { FullWidth = true, MaxWidth = MaxWidth.ExtraSmall };
     protected override async Task OnInitializedAsync()
     {
-        FactionId = FactionId ?? "na";
+        FactionId ??= "na";
         var factionDto = (await Http.GetFromJsonAsync<List<FactionDTO>>("data/factions.json"))?
                          .FirstOrDefault(f => f.Id == FactionId) ?? null;
         if (factionDto is not null)
             Faction = await Repository!.GetFactionByDTO(factionDto);
     }
 
-    protected string GetColorString(string color)
-    {
-        return $"color:{color}";
-    }
-
-    protected string StartingUnitString(StartingUnit su)
-    {
-        if (su.Amount is 1)
-            return $"{su.Amount} {su.UnitType}";
-        return $"{su.Amount} {su.UnitType}s";
-    }
-
     protected async Task GetUnitAndOpen(string unitType)
     {
         // needs units.json filled out
+        if (IsUnitDisplayed)
+            return;
         SelectedUnit = (await Http.GetFromJsonAsync<List<Unit>>("data/units.json"))?
                        .FirstOrDefault(u => u.UnitType == unitType);
         IsUnitDisplayed = true;
     }
-    private void UnitClose()
-    {
-        IsUnitDisplayed = false;
-    }
+
+    protected string GetColorString(string color) => $"color:{color}";
+    protected void UnitClose() => IsUnitDisplayed = false;
 }

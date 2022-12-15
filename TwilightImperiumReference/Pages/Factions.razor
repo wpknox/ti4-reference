@@ -32,7 +32,14 @@ else
             </MudCardHeader>
             <MudCardContent>
                 <MudText Typo="Typo.h6"><strong>Flagship: </strong>@faction.Flagship.Name</MudText>
-                <MudText><strong>Starting Tech: </strong>@faction.StartingTechnology.Join()</MudText>
+                @if (faction.Id is "argent")
+                {
+                    <MudText><strong>Starting Tech - Pick 2: </strong>@faction.StartingTechnology.Join()</MudText>
+                }
+                else
+                {
+                    <MudText><strong>Starting Tech: </strong>@faction.StartingTechnology.Join()</MudText>
+                }
                 @if (faction.HomePlanets.Count > 1)
                 {
                     <MudText><strong>Home Planets : </strong>@faction.HomePlanets.Join()</MudText>

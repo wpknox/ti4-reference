@@ -98,7 +98,6 @@
         "Name": "The Argent Flight",
         "Icon": "/images/factionLogos/Argent.png",
         "StartingTechnology": [
-            "Pick 2 of the 3:",
             "Neural Motivator",
             "Sarween Tools",
             "Plasma Scoring"
